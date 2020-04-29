@@ -1,0 +1,199 @@
+* {
+
+    font-family: 'IM Fell English', serif;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    justify-content: center; 
+    
+  }
+
+
+  body {
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-gap: 0px;
+    grid-auto-rows: min-content;
+    padding-top: 0px;
+    margin: 0px;
+  }
+
+/* font-size: calc(1em + 1vw);
+liine-height:2em;
+padding: 5em;
+margin: 1em;*/
+
+
+
+
+/*-----------------Pantalla 1-------------------------*/
+
+
+.inicio-pagina 
+{
+        font-size: calc(1.2em + 1vw);
+        position: absolute;
+        left:50%;
+        top: 54%;
+        transform: translateX(-50%) translateY(-50%);
+       
+}
+
+h1 {
+text-align: center;
+font-family: 'IM Fell English', serif
+ }
+
+h2 {
+  text-align: center;
+  font-family: 'IM Fell English', serif
+  
+   }
+  
+
+span {
+text-align: center;
+font-size: 28px;
+font-family: 'IM Fell English', serif;
+ }
+
+p {
+
+font-size: 28px;
+text-align: center;
+font-family: 'IM Fell English', serif;
+font-style: italic;
+   
+}
+
+
+
+
+/*-----------------Pantalla 2-------------------------*/
+
+
+.clasificaciones {
+
+  background-image: url(HP.jpg)
+  position: top;
+  left:50%;
+  top: 100%;
+  text-align: top;
+ 
+}
+
+#search {
+text-align: top;
+}
+
+
+     
+  }
+
+  
+  /* Estilos de logos*/
+  
+  .logo {
+      align-content: center;
+      width: 63%;
+      display: block;
+      margin: auto;
+      padding: 10px;
+  }
+ 
+.btn {
+    background-color:rgb(114, 48, 48);
+    color: black;
+    padding: 10px 40px;
+    font-size: 24px;
+    border: 1px solid rgb(68, 56, 56);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+
+  btnCancel {
+    background-color:rgb(69, 51, 85);
+    color: black;
+    padding: 10px 40px;
+    font-size: 24px;
+    border: 1px solid rgb(68, 56, 56);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+
+
+
+
+ /* Pantalla 2 */
+.clasificaciones {
+
+  align-content: center;
+text-align: center;
+
+
+}
+
+
+  input[type='checkbox'] {
+    display: none;
+  }
+  
+  input[type='checkbox']:checked ~ nav {
+    transform: translateX(100%);
+  }
+
+ 
+
+
+
+
+
+
+  
+  /* Estilos del circulo de Patronus*/
+  
+  .circleSpells {
+    width: 12px;
+    margin-right: 6px;
+  }
+  
+  /* Estilos del menu principal*/
+  
+  
+  
+ 
+  
+
+  
+  /* Estilos de las subcategorías del menú principal */
+  
+ 
+  
+ 
+
+  
+  /* Estilos del icono del menu*/
+
+  /*Estilo del logo alterno del Menu */
+  
+  .alternLogoMenu {
+    width: 25%;
+    margin: 5% 5% 3%;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  
+ 
+
+ 
+
+  .oculto {
+    display: none;
+}
