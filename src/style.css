@@ -1,0 +1,57 @@
+*{
+    font-family: 'IM Fell English', serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(fondopagina.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*font-size: calc(1em + 1vw);
+        line-height: 2em;
+        padding: 5em;
+        margin: 1em;*/
+
+#logoLentes{
+    position: absolute;
+width: 20%;
+left: 50%;
+top: 60%;
+background-position: center;
+transform: translateX(-50%) translateY(-50%);
+}
+
+h1,p{
+    position: absolute;
+    text-align: center;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.titulo {
+    left: 50%;
+    top: 44%;
+}
+
+.textoInicio{
+    font-size: 2em;
+    left: 50%;
+    top: 76%;
+}
+
+p2{
+    position: absolute;
+    width: 67%;
+    left: 17%;
+    top: 95%;
+    font-family: IM FELL English SC;
+    font-size: 2em;
+    line-height: 46%;
+    text-align: center;
+    
+   
+}
