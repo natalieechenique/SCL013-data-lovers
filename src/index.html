@@ -1,65 +1,138 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>"Harry Potter Beginners"</title>
-  
 
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+  <meta charset="utf-8">
+  <title>Harry Potter Beginners</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+maximum-scale=1">
   <link rel="stylesheet" href="style.css" />
-  
-  
+
 </head>
 
-
 <body>
- 
- 
 
-<!--  Pantalla 1 inicio-->
 
-<img src="fondopaginamid.jpg">
-  <main class = "">
+  <section id="welcome" class="welcome">
 
-<section class="inicio-pagina" id="inicio">
-<h1> Harry Potter </h1>
- <h2>Beginners</h2>
-  <img src="lentes.png" width="145" height="90">
-  <br>
-<span>Una mágica guía para principiantes</span>
-<br><br><br>
-<p>¡Juro solemnemente que mis intenciones no son buenas!</p>
-<br>
-<button class="btn" id="selectIngresar">Ingresar</button>
+    <div class="inicio" id="inicio">
+  <h1 class="titulo">HARRY POTTER <br> Beginners</h1>
+  <img src="./lentes.png" class= "lentes" alt="imgLentes">
+
+    <p class="textoInicio"><i> Una mágica guía para principiantes y conocedores</i></p>
+    <p class="textoJuro">¡Juro solemnemente que mis intenciones no son buenas!</p>
+
+    <button class='button' id='selectEnter'>Entrar</button>
+  </div>
+</div>
+
 </section>
 
 
 
-<!--  Pantalla 2 clasificaciones  --->
 
 
-    <section class= "clasificaciones oculto" id="clasificaciones" >
-      <img src="fondopagina.jpg">
 
-        <input type="search" id="search" placeholder="Busca por nombre del personaje" />
-        <button class="icon"><i class="fa fa-search"></i></button>
+  <!-- Pag 2 -->
 
-        <button class="btnCancel" id="selectVolver">Volver</button>
+
+
+  <section id="categorias" class="categorias">
+
+    <div class="headerDos">
+
+      <div class="title" id="tittleTwo"> Harry Potter Beginners</div>
+      <div class="logo rayo" id="logoR"></div>
+      <div class="logo lentes" id="lentes"></div>
+      <div class="logo container hamburguesa" id="logoCont"></div>
+
+    </div>
+
+    <div class="row cat" id="row">
+      <div class="drop-down">
+        <span>Casas</span>
+        <span>Griffindor</span>
+        <span>Hafflepuff</span>
+        <span>Ravenclaw</span>
+        <span>Slytherin</span>
       </div>
-      </section>
-   
 
 
-<!--<script src="main.js"></script>-->
+      <div class="drop-down">
+        <span>Personajes</span>
+        <spanp>Protagonistas</span>
+          <span>Antagonistas</span>
+      </div>
 
- <script type="module" src="main.js"></script>
- <script type="module" src="data.js"></script>
+      <div class="drop-down">
+        <span>Hogwarts</span>
+        <span>Estudiantes</span>
+        <span>Staff</span>
+      </div>
+
+      <div class="drop-down">
+        <span>Patronus</span>
+      </div>
+    </div>
+
+    <div class="row actions" id="row">
+
+
+      <div class="action">Buscador de personajes</div>
+
+      <div class="action">Ordenar por
+        <span>A-Z</span>
+        <span>Z-A</span>
+      </div>
+
+      <div class="action">
+        <span>Filtrar por</span>
+        <span>Género</span>
+        <span>Femenino</span>
+        <span>Masculino</span>
+        <span>Especie</span>
+        <span>Humano</span>
+        <span>Criatura</span>
+      </div>
+    </div>
+
+    <div class="row results" id="results"></div>
+
+
+
+    <!-- <section class "oculto">
+<div class='buscador ' id='buscador'>
+
+  <input type="search" id="search oculto" placeholder="Busca por nombre del personaje"/>
+  <button class="icon"><i class="fa fa-search"></i></button>
+
+  <button class='backButton' id='back'>Volver</button>
+
+</div>
+</section> -->
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+  <div id="root"></div>
+
+
+  <script type="module" src="main.js"></script>
 
 </body>
+
+<footer>Carla Díaz y Natalie Echenique, Laboratoria 2020</footer>
 
 </html>
