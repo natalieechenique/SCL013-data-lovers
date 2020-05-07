@@ -44,9 +44,8 @@ Este flujo corresponde a la iteración del segundo diagrama, el corregimos segú
 
 De acuerdo a nuestra investigación, los libros de Harry Potter siguen siendo dentro de los más vendidos el 2019 según estadísticas. Así mismo, las saga de películas sigue estando entre las más vistas.
 
-[Estadístca de Libros](https://es.statista.com/estadisticas/586222/libros-mas-leidos-por-jovenes-por-ventas/)
-[Estadística de Películas] (https://es.statista.com/estadisticas/587400/series-de-peliculas-con-mas-ingresos-en-el-mundo/)
- 
+[Estadístcas de Libros y peliculas](https://es.statista.com/estadisticas/586222/libros-mas-leidos-por-jovenes-por-ventas/)(https://es.statista.com/estadisticas/587400/series-de-peliculas-con-mas-ingresos-en-el-mundo/)
+
 Conforme a estos datos y el análisis que se hizo con nuestros usuarios, definimos que existe un rango de edad entre los 13 y los 40 años en la que se origina una relación con el mundo de Harry Potter, lo que se condice directamente con el tiempo en que la saga de libros y películas se estrenan. Se mantiene un vinculo desde la época en que se conoce HP hasta la actualidad. En consecuencia, definimos nuestros usuarios de la siguiente forma:
 
 **Usuarios**
@@ -79,10 +78,14 @@ Usuarios avanzados: Estos usuarios acceden a la página para encontrar una guía
 
 <a id="prototipos"> :art: **Prototipado** :art: <a>
 
-Teniendo listo y dispuesto el paso anterior, comenzamos a crear nuestro prototipo de baja fidelidad en papel y luego en "Invision", con correcciones agregadas.
+Teniendo listo y dispuesto el paso anterior, comenzamos a crear nuestro prototipo de baja fidelidad en papel y luego el wireframe en "Invision", con correcciones agregadas.
 
 ![Prototipo de baja](prototipodebaja.jpg)
-[Prototipo en Invision](https://carladaz131271.invisionapp.com/console/datalovers-ck9vt16ow0jvq019dnpudp659/ck9vt2cp70d670198dakkosgp/play)
+
+![Wireframe en Invision](newframe.jpg)(2.jpg)
+
+
+[Puedes ver acá nuestro prototipo de baja en Invision](https://carladaz131271.invisionapp.com/console/datalovers-ck9vt16ow0jvq019dnpudp659/ck9vt2cp70d670198dakkosgp/play)
 
 Pese a que como se observa en la imagen y link de prototipo anterior, habíamos propuesto un título en particular. Recibimos feedback de nuestros usuarios y de nuestro cliente, enfocado a que debíamos decidir si la web se presentaría en español o en inglés, ya que en efecto, era confuso que se mostrara en dos idiomas. En consecuencia se decidió mantener el título fusionando dichos idiomas, a modo de referencia con las raíces del mundo de Harry Potter, pero también presentándolo en un breve concepto, de manera que nos apropiáramos del proceso. Desde aquí comenzamos construir nuestro prototipo de alta en "Figma", con correcciones agregadas.
 
