@@ -82,7 +82,8 @@ Teniendo listo y dispuesto el paso anterior, comenzamos a crear nuestro prototip
 
 ![Prototipo de baja](prototipodebaja.jpg)
 
-![Wireframe en Invision](newframe.jpg)(2.jpg)
+![Wireframe en Invision](newframe.jpg)
+(2.jpg)
 
 
 [Puedes ver acá nuestro prototipo de baja en Invision](https://carladaz131271.invisionapp.com/console/datalovers-ck9vt16ow0jvq019dnpudp659/ck9vt2cp70d670198dakkosgp/play)
