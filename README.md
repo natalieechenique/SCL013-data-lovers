@@ -48,7 +48,7 @@ necesidades de los usuarios que proviene de una investigación (_research_)
 hecha por el equipo de Laboratoria.
 
 Una vez que elijas, diseña tu proyecto intentando ofrecerle la mejor experiencia
-posible para ayudarle a satisfacer sus necesidades.
+posible para ayudarle a satisfacer sus necesidades. 
 
 Estos son datos que te proponemos:
 
