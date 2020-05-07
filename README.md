@@ -2,21 +2,21 @@
 
 ## Índice 
 
-* [1. ¿Qué es Harry Potter Beginners?](#1-intro)
-* [2. Una mágica guía](#2-guía)
-* [3. ¿Cómo se construye HP Beginners?](#3-construcción)
-* [4. Experiencia UX](#4-usuarios)
-* [5. Prototipado](#5-prototipos)
-* [6. Navegación](#6-navegación)
-* [7. Checklist](#9-checklist)
+* [1. ¿Qué es Harry Potter Beginners?](#intro)
+* [2. Una mágica guía](#guía)
+* [3. ¿Cómo se construye HP Beginners?](#construcción)
+* [4. Experiencia UX](#usuarios)
+* [5. Prototipado](#prototipos)
+* [6. Navegación](#navegación)
+* [7. Checklist](#checklist)
 
 ***
 
-<a id="1-intro"> ## :dizzy: 1. ¿Qué es Harry Potter Beginners? :dizzy:
+<a id="intro"> :dizzy: 1. ¿Qué es Harry Potter Beginners? :dizzy: <a>
 
 Harry Potter Beginners, es una app informativa, cuyo enfoque principal es mostrar datos claves para conocer a grandes rasgos, el universo de Harry Potter. Tomando como antecedente la saga de libros y películas de este fantástico mundo. 
 
-<a id="2-guía>  ## :star: 2. Una mágica guía para principiantes y conocedores. :star:
+<a id="guía"> :star: 2. Una mágica guía para principiantes y conocedores. :star: <a>
 
 HP Beginners, se gesta a través de la simple necesidad de nuestros usuarios de conocer más, acerca de este imaginario. Evocando referencias sencillas y poco comunes con respecto a la visualidad del mundo de Harry Potter. En relación a lo anterior proponemos a HP Beginners como "una mágica guía para principiantes y conocedores". Un mini diccionario o guía según lo dice su nombre, en el que puedes acceder fácilmente a un contenido que será un ayuda memoria tanto para los que estén recién conociendo, como para los que ya sean especialistas en el tema.
 
@@ -24,7 +24,7 @@ El objetivo principal de esta web, es mejorar la experiencia de usuario a travé
 
 Si bien el nombre de esta web "Beginners" genera una relación directa con la categoría de principiante. Consideramos de acuerdo a la opinión de nuestros usuarios, que en esta página somos todos "Beginners" y estamos conociendo un espacio nuevo desde donde pueden nacer nuevas experiencias que se podrán compartir.
 
-<a id="3-construcción"> ## :hammer: **¿Cómo se construye HP Beginners** :hammer:
+<a id="construcción"> :hammer: **¿Cómo se construye HP Beginners** :hammer: <a>
 
 Para el desarrollo de esta plataforma, hicimos una investigación previa para entender las necesidades de nuestro usuario con respecto a la navegación. Acorde a dichas necesidades, construimos un diagrama de flujo en papel que representa una guía hacia lo que luego presentamos como diagrama digital definitivo.
 
@@ -40,7 +40,7 @@ Este flujo corresponde a la iteración del segundo diagrama, el corregimos segú
 
 ![Flujo digital 2](flujo2.jpg)
 
-<a id="4-usuarios"> ## :two_women_holding_hands: **Nuestros mágicos usuarios.** :two_men_holding_hands:
+<a id="usuarios"> :two_women_holding_hands: **Nuestros mágicos usuarios.** :two_men_holding_hands: <a>
 
 De acuerdo a nuestra investigación, los libros de Harry Potter siguen siendo dentro de los más vendidos el 2019 según estadísticas. Así mismo, las saga de películas sigue estando entre las más vistas.
 
@@ -77,7 +77,7 @@ Usuarios Principiantes: Accederían para poder aclarar dudas al momento de estar
 
 Usuarios avanzados: Estos usuarios acceden a la página para encontrar una guía visual y ayuda memoria con respecto a la historia en general, o las características particulares de los personajes. De otro modo accederían con el fin de buscar curiosidades o información que no se muestra en las películas o no queda clara en el libro.
 
-<a id="5-prototipos"> ## :art: **Prototipado** :art:
+<a id="prototipos"> :art: **Prototipado** :art: <a>
 
 Teniendo listo y dispuesto el paso anterior, comenzamos a crear nuestro prototipo de baja fidelidad en papel y luego en "Invision", con correcciones agregadas.
 
@@ -92,7 +92,7 @@ Acá el resultado
 En el prototipo de alta, redefinimos detalles y agregamos todos los cambios que consideramos nuevamente según nuestros usuarios y nuestro cliente. De este modo, determinamos la navegación e interfaz de nuestra plataforma.
  
 
- <a id="6-navegación"> ## :globe_with_meridians: **Navegación** :globe_with_meridians:
+ <a id="navegación"> :globe_with_meridians: **Navegación** :globe_with_meridians: <a>
 
 Como consecuencia de nuestra investigación, definimos la navegación y manejo de la plataforma en dos slide funcionales. 
 
@@ -121,7 +121,7 @@ En este Slide visualizamos el funcionamiento principal de la plataforma. Esto se
 
 ***
 
-## 9. Checklist
+9. Checklist
 
 * [ ] Usa VanillaJS.
 * [ ] No hace uso de `this`.
