@@ -28,7 +28,7 @@ Si bien el nombre de esta web "Beginners" genera una relación directa con la ca
 
 Para el desarrollo de esta plataforma, hicimos una investigación previa para entender las necesidades de nuestro usuario con respecto a la navegación. Acorde a dichas necesidades, construimos un diagrama de flujo en papel que representa una guía hacia lo que luego presentamos como diagrama digital definitivo.
 
-![Flujo en papel](flujoenpapel.jpg)
+![Flujo en papel](flujopapel.jpg)
 
 Como se puede apreciar, el primer flujograma contiene indicaciones y características que luego acotamos y mejoramos de acuerdo a la investigación antes mencionada. Según esto, definimos dos nuevos diagramas de flujo.
 
@@ -79,11 +79,12 @@ Usuarios avanzados: Estos usuarios acceden a la página para encontrar una guía
 <a id="prototipos"> :art: **Prototipado** :art: <a>
 
 Teniendo listo y dispuesto el paso anterior, comenzamos a crear nuestro prototipo de baja fidelidad en papel y luego el wireframe en "Invision", con correcciones agregadas.
+Acá nuestro prototipo de baja en papel
+![Prototipo de baja](prototipobaja.jpg)
 
-![Prototipo de baja](prototipodebaja.jpg)
-
+Acá nuestro Wireframe
 ![Wireframe en Invision](newframe.jpg)
-(2.jpg)
+![Continuación del Wireframe](2.jpg)
 
 
 [Puedes ver acá nuestro prototipo de baja en Invision](https://carladaz131271.invisionapp.com/console/datalovers-ck9vt16ow0jvq019dnpudp659/ck9vt2cp70d670198dakkosgp/play)
@@ -91,12 +92,14 @@ Teniendo listo y dispuesto el paso anterior, comenzamos a crear nuestro prototip
 Pese a que como se observa en la imagen y link de prototipo anterior, habíamos propuesto un título en particular. Recibimos feedback de nuestros usuarios y de nuestro cliente, enfocado a que debíamos decidir si la web se presentaría en español o en inglés, ya que en efecto, era confuso que se mostrara en dos idiomas. En consecuencia se decidió mantener el título fusionando dichos idiomas, a modo de referencia con las raíces del mundo de Harry Potter, pero también presentándolo en un breve concepto, de manera que nos apropiáramos del proceso. Desde aquí comenzamos construir nuestro prototipo de alta en "Figma", con correcciones agregadas.
 
 Acá el resultado 
+![fotos figma](framefigma.jpg)
+
 [Prototipo de alta](https://www.figma.com/proto/QKLnIJxhSDmVPBpiDhyRbW/Harry-Potter-Beginners?node-id=1%3A5&viewport=-2488%2C268%2C0.48059552907943726&scaling=contain)
 
 En el prototipo de alta, redefinimos detalles y agregamos todos los cambios que consideramos nuevamente según nuestros usuarios y nuestro cliente. De este modo, determinamos la navegación e interfaz de nuestra plataforma.
  
 
- <a id="navegación"> :globe_with_meridians: **Navegación** :globe_with_meridians: <a>
+ <a id="navegación"> :rowboat: **Navegación** :rowboat: <a>
 
 Como consecuencia de nuestra investigación, definimos la navegación y manejo de la plataforma en dos slide funcionales. 
 
