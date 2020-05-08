@@ -12,11 +12,13 @@
 
 ***
 
-<a id="intro"> :dizzy: 1. ¿Qué es Harry Potter Beginners? :dizzy: <a>
+<a id="intro"> :dizzy: ¿Qué es Harry Potter Beginners? :dizzy: <a>
 
 Harry Potter Beginners, es una app informativa, cuyo enfoque principal es mostrar datos claves para conocer a grandes rasgos, el universo de Harry Potter. Tomando como antecedente la saga de libros y películas de este fantástico mundo. 
 
-<a id="guía"> :star: 2. Una mágica guía para principiantes y conocedores. :star: <a>
+***
+
+<a id="guía"> :star: Una mágica guía para principiantes y conocedores. :star: <a>
 
 HP Beginners, se gesta a través de la simple necesidad de nuestros usuarios de conocer más, acerca de este imaginario. Evocando referencias sencillas y poco comunes con respecto a la visualidad del mundo de Harry Potter. En relación a lo anterior proponemos a HP Beginners como "una mágica guía para principiantes y conocedores". Un mini diccionario o guía según lo dice su nombre, en el que puedes acceder fácilmente a un contenido que será un ayuda memoria tanto para los que estén recién conociendo, como para los que ya sean especialistas en el tema.
 
@@ -24,10 +26,12 @@ El objetivo principal de esta web, es mejorar la experiencia de usuario a travé
 
 Si bien el nombre de esta web "Beginners" genera una relación directa con la categoría de principiante. Consideramos de acuerdo a la opinión de nuestros usuarios, que en esta página somos todos "Beginners" y estamos conociendo un espacio nuevo desde donde pueden nacer nuevas experiencias que se podrán compartir.
 
+***
+
 <a id="construcción"> :hammer: **¿Cómo se construye HP Beginners** :hammer: <a>
 
 Para el desarrollo de esta plataforma, hicimos una investigación previa para entender las necesidades de nuestro usuario con respecto a la navegación. Acorde a dichas necesidades, construimos un diagrama de flujo en papel que representa una guía hacia lo que luego presentamos como diagrama digital definitivo.
-
+(faltan historias de usurio/planificación)
 ![Flujo en papel](flujopapel.jpg)
 
 Como se puede apreciar, el primer flujograma contiene indicaciones y características que luego acotamos y mejoramos de acuerdo a la investigación antes mencionada. Según esto, definimos dos nuevos diagramas de flujo.
@@ -39,6 +43,8 @@ Esta imagen corresponde al primer diagrama que digitalizamos sin iteración.
 Este flujo corresponde a la iteración del segundo diagrama, el corregimos según el feedback de nuestro cliente para simplificar la funcionalidad de la plataforma.
 
 ![Flujo digital 2](flujo2.jpg)
+
+***
 
 <a id="usuarios"> :two_women_holding_hands: **Nuestros mágicos usuarios.** :two_men_holding_hands: <a>
 
@@ -75,6 +81,8 @@ Conforme a estos datos y el análisis que se hizo con nuestros usuarios, definim
 Usuarios Principiantes: Accederían para poder aclarar dudas al momento de estar viendo las películas o libros. Para poder entender la historia y ahorrar tiempo en el proceso de esta introducción al mundo HP.
 
 Usuarios avanzados: Estos usuarios acceden a la página para encontrar una guía visual y ayuda memoria con respecto a la historia en general, o las características particulares de los personajes. De otro modo accederían con el fin de buscar curiosidades o información que no se muestra en las películas o no queda clara en el libro.
+(faltan testeos de usuario y maze/guía de preguntas/transcripciones de entrevistas/conclusiones)
+***
 
 <a id="prototipos"> :art: **Prototipado** :art: <a>
 
@@ -82,22 +90,23 @@ Teniendo listo y dispuesto el paso anterior, comenzamos a crear nuestro prototip
 Acá nuestro prototipo de baja en papel
 ![Prototipo de baja](prototipobaja.jpg)
 
-Acá nuestro Wireframe
+**Acá nuestro Wireframe**
 ![Wireframe en Invision](newframe.jpg)
 ![Continuación del Wireframe](2.jpg)
 
 
 [Puedes ver acá nuestro prototipo de baja en Invision](https://carladaz131271.invisionapp.com/console/datalovers-ck9vt16ow0jvq019dnpudp659/ck9vt2cp70d670198dakkosgp/play)
 
+
 Pese a que como se observa en la imagen y link de prototipo anterior, habíamos propuesto un título en particular. Recibimos feedback de nuestros usuarios y de nuestro cliente, enfocado a que debíamos decidir si la web se presentaría en español o en inglés, ya que en efecto, era confuso que se mostrara en dos idiomas. En consecuencia se decidió mantener el título fusionando dichos idiomas, a modo de referencia con las raíces del mundo de Harry Potter, pero también presentándolo en un breve concepto, de manera que nos apropiáramos del proceso. Desde aquí comenzamos construir nuestro prototipo de alta en "Figma", con correcciones agregadas.
 
-Acá el resultado 
 ![fotos figma](framefigma.jpg)
 
-[Prototipo de alta](https://www.figma.com/proto/QKLnIJxhSDmVPBpiDhyRbW/Harry-Potter-Beginners?node-id=1%3A5&viewport=-2488%2C268%2C0.48059552907943726&scaling=contain)
+[Acá puedes ver nuestro prototipo de alta](https://www.figma.com/proto/QKLnIJxhSDmVPBpiDhyRbW/Harry-Potter-Beginners?node-id=1%3A5&viewport=-2488%2C268%2C0.48059552907943726&scaling=contain)
 
 En el prototipo de alta, redefinimos detalles y agregamos todos los cambios que consideramos nuevamente según nuestros usuarios y nuestro cliente. De este modo, determinamos la navegación e interfaz de nuestra plataforma.
- 
+
+***
 
  <a id="navegación"> :rowboat: **Navegación** :rowboat: <a>
 
