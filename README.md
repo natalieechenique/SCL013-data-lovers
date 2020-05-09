@@ -30,8 +30,8 @@ Si bien el nombre de esta web "Beginners" genera una relación directa con la ca
 
 <a id="construcción"> :hammer: **¿Cómo se construye HP Beginners** :hammer: <a>
 
-Para el desarrollo de esta plataforma, hicimos una investigación previa para entender las necesidades de nuestro usuario con respecto a la navegación. Acorde a dichas necesidades, construimos un diagrama de flujo en papel que representa una guía hacia lo que luego presentamos como diagrama digital definitivo.
-(faltan historias de usurio/planificación)
+Para el desarrollo de esta plataforma, hicimos una investigación previa para entender las necesidades de nuestro usuario con respecto a la navegación. Acorde a dichas necesidades, construimos un diagrama de flujo en papel que representa una guía hacia lo que luego presentamos como diagrama digital definitivo. según esto definimos una planificación e historias de usuario que fuimos cumpliendo durante cada sprint. Para esto utilizamos las plataformas de "Trello" y "Miro". 
+
 ![Flujo en papel](flujopapel.jpg)
 
 Como se puede apreciar, el primer flujograma contiene indicaciones y características que luego acotamos y mejoramos de acuerdo a la investigación antes mencionada. Según esto, definimos dos nuevos diagramas de flujo.
@@ -44,13 +44,18 @@ Este flujo corresponde a la iteración del segundo diagrama, el corregimos segú
 
 ![Flujo digital 2](flujo2.jpg)
 
+
+[Revisa acá nuestra planicación](https://miro.com/welcomeonboard/UcPQAVRzS00CIXHos62V7Y3bWSURdB5585Fu7NBYcsPXKgyXNmca6mOHkW7sBA3S)
+[Revisa acá nuestras historias de usuario](https://trello.com/b/6KMWnkiP/planificaci%C3%B3n-data-lovers)
+
 ***
 
 <a id="usuarios"> :two_women_holding_hands: **Nuestros mágicos usuarios.** :two_men_holding_hands: <a>
 
 De acuerdo a nuestra investigación, los libros de Harry Potter siguen siendo dentro de los más vendidos el 2019 según estadísticas. Así mismo, las saga de películas sigue estando entre las más vistas.
 
-[Estadístcas de Libros y peliculas](https://es.statista.com/estadisticas/586222/libros-mas-leidos-por-jovenes-por-ventas/)(https://es.statista.com/estadisticas/587400/series-de-peliculas-con-mas-ingresos-en-el-mundo/)
+[Estadístcas de Libros](https://es.statista.com/estadisticas/586222/libros-mas-leidos-por-jovenes-por-ventas/)
+[Estadísticas de películas](https://es.statista.com/estadisticas/587400/series-de-peliculas-con-mas-ingresos-en-el-mundo/)
 
 Conforme a estos datos y el análisis que se hizo con nuestros usuarios, definimos que existe un rango de edad entre los 13 y los 40 años en la que se origina una relación con el mundo de Harry Potter, lo que se condice directamente con el tiempo en que la saga de libros y películas se estrenan. Se mantiene un vinculo desde la época en que se conoce HP hasta la actualidad. En consecuencia, definimos nuestros usuarios de la siguiente forma:
 
@@ -81,12 +86,12 @@ Conforme a estos datos y el análisis que se hizo con nuestros usuarios, definim
 Usuarios Principiantes: Accederían para poder aclarar dudas al momento de estar viendo las películas o libros. Para poder entender la historia y ahorrar tiempo en el proceso de esta introducción al mundo HP.
 
 Usuarios avanzados: Estos usuarios acceden a la página para encontrar una guía visual y ayuda memoria con respecto a la historia en general, o las características particulares de los personajes. De otro modo accederían con el fin de buscar curiosidades o información que no se muestra en las películas o no queda clara en el libro.
-(faltan testeos de usuario y maze/guía de preguntas/transcripciones de entrevistas/conclusiones)
+(FALTAN TESTEOS DE USUARIO Y MAZE/GUÍA DE ENTREVISTAS/TRANSCRIPCIONES DE ENTREVISTAS/CONCLUSIONES)
 ***
 
 <a id="prototipos"> :art: **Prototipado** :art: <a>
 
-Teniendo listo y dispuesto el paso anterior, comenzamos a crear nuestro prototipo de baja fidelidad en papel y luego el wireframe en "Invision", con correcciones agregadas.
+Teniendo listo y dispuesto el paso anterior, comenzamos a crear nuestro prototipo de baja fidelidad en papel y luego el wireframe en "Invision", con correcciones agregadas.(HABLAR DE LA VISUALIDAD)
 Acá nuestro prototipo de baja en papel
 ![Prototipo de baja](prototipobaja.jpg)
 
