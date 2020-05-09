@@ -1,45 +1,47 @@
 
-
 *{
   font-family: 'IM Fell English', serif;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-
 }
 
-.body{
-  box-sizing: border-box;
-}
+
 
 .welcome {
-  background-image: url(fondopagina.jpg);
-  background-repeat: no-repeat;
+  background: url(fondopagina.jpg)no-repeat center center fixed;
   background-size: cover;
-  border: 1px solid red;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    margin: 0px;
   padding: 20px;
   display: grid;
+  display: flex;
   grid-gap: 20px;
-}
+  }
 
 
-.inicio{
+
+.inicio {
+  color: black;
   align-content:center;
   text-align: center;
   display: grid;
   grid-auto-rows: max-content;
   height: 100vh;
-  border: 1px solid red;
-  padding: 20px;
+  margin: 0px;
 }
 
 
-
-.lentes{
+.logo {
   height: 100px;
+  align-content:center;
   align-items:center;
-  border: 1px solid red;
+  transform: translateX(345%) translateY(-30%);
+  margin: 0px;
 }
+
 
 h1,p{
   position: absolute;
@@ -50,14 +52,13 @@ h1,p{
 .titulo {
   left: 50%;
   top: 31%;
-  border: 1px solid red;
+  font-size: 3em;
 }
 
 .textoInicio{
   font-size: 2em;
   left: 50%;
   top: 56%;
-  border: 1px solid red;
 }
 
 .textoJuro{
@@ -65,13 +66,10 @@ h1,p{
   width: 67%;
   left: 50%;
   top: 76%;
-  font-family: IM FELL English SC;
   font-size: 2em;
-  transform: translateX(-50%) translateY(-50%);
-  border: 1px solid red;
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
 }
-
-
 
 
 
@@ -86,37 +84,36 @@ h1,p{
   transition: 0.4s;
   max-width: max-content;
   padding: 10px 20px;
-  border: 1px solid red;
-
-
-
 }
+
+.back {
+  display:flex;
+  align-items: center;
+  align-content: center;
+  max-width: max-content;
+}
+
 
 .backButton {
   font-family: IM FELL English SC;
   background-color:rgb(106, 67, 124);
   color: black;
-  padding: 10px 40px;
+  padding: 10px 20px;
   font-size: 24px;
   border: 1px solid rgb(68, 56, 56);
   border-radius: 6px;
   cursor: pointer;
   transition: 0.4s;
-  border: 1px solid red;
+  text-align:center
 }
 
 footer{
-background-color: rgb(236, 178, 102);
+background-color: rgb(236, 176, 98);
 text-align: right;
-border: 1px solid rgb(168, 12, 142);
-padding: 20px;
+padding: 0;
+font-style: italic;
+font-size: 18px;
 }
-
-
-.oculto {
-  display: none;
-}
-
 
 
 
@@ -125,31 +122,34 @@ SECTION 2 */
 
 
 .categorias {
-  background-image: url(hpsegundo.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 1px solid rgb(38, 2, 122);
+  background: url(hpsegundo.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
   padding: 20px;
   display: grid;
   grid-gap: 20px;
+  text align-items: center;
 }
 
 
 .headerDos{
-  border: 1px solid rgb(10, 19, 73);
+  display:grid;
+  align-content: center;
+  align-items: center;
   padding: 20px;
-
 }
 
-.tittleTwo {
-  left: 50%;
-  top: 31%;
-
+.tittle.tittleTwo {
+  text-align: center;
+  justify-content: center;
+  font-size: 3em;
 }
 
 .menu-container {
-
-  border: 1px solid rgb(42, 21, 136);
+  display:grid;
+  align-content: center;
+  align-items: center;
   padding: 20px;
 }
 
@@ -157,7 +157,6 @@ SECTION 2 */
 .row {
   width:900px;
   max-width: 90%;
-  border: 1px solid rgb(63, 34, 143);
   padding: 20px;
 display: grid;
 /* Genera cantidad de columnas  */
@@ -170,6 +169,69 @@ margin:0 auto;
   grid-template-columns: repeat(auto-fit, minmax(0,1fr));
 }
 
+
+
+/* Botones drop down */
+
+.dropdown {
+  padding: 20px;
+  max-width: max-content;
+}
+
+.dropbtn {
+  background-color: rgb(165, 88, 88);
+  color: rgb(0, 0, 0);
+  grid-gap:20px;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  max-width: max-content;
+}
+
+.btnP {
+  background-color: rgb(165, 88, 88);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  grid-gap:20px;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  max-width: max-content;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #b85555;
+  box-shadow: 0px 8px 16px 0px rgba(255, 162, 159, 0.795);
+  z-index: 1;
+  border-radius: 6px;
+  padding: 8px;
+  justify-content: center;
+margin:10;
+max-width: max-content;
+}
+
+.dropdown-content a {
+  color: rgb(0, 0, 0);
+  padding: 5px 8px;
+  text-decoration: none;
+  display: block;
+  justify-content: center;
+margin:10;
+max-width: max-content;
+}
+
+.dropdown-content a:hover {background-color: rgb(145, 110, 110);}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: rgb(170, 97, 97);}
+
+
+
+
 .row.actions {
   grid-template-columns: repeat(auto-fit, minmax(0,200px));
 }
@@ -178,19 +240,11 @@ margin:0 auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.drop-down {
-  border: 1px solid rgb(13, 29, 97);
-  padding: 20px;
-}
-
-
 
 .action{
-  border: 1px solid rgb(25, 26, 83);
   padding: 20px;
 display:grid;
 }
-
 
 .card {
   border-radius: 6px;
@@ -219,4 +273,54 @@ display:grid;
   text-align: center;
   padding: 10px 20px;
   font-size: 18px;
+}
+
+
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+@media screen and (min-width: 480px) {
+  #inner{
+      width: 50%;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  #inner{
+      width: 33%;
+  }
 }
