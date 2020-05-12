@@ -1,21 +1,25 @@
-@media screen and (max-width: 400px) {
-}
+/* @media screen and (max-width: 400px) {
+} */
 
 
 *{
   font-family:'IM fell English', serif;
   margin: 0px;
-  padding: 0px;
+  /* padding: 0px; */
 }
 
 /*
 Agregar la class al lado de body con un punto y el 2do fondo */
 
 body {
-  background: url(hpsegundo.jpg);
-  background-repeat: no-repeat;
+  background-image: url("fondopagina.jpg");
+  background-repeat: repeat-y;
+  background-size: 100%;
 }
 
+.filtersBackground {
+  background-image: url("hpsegundo.jpg");
+}
 
 .welcome {
   margin: 0px;
@@ -32,7 +36,6 @@ body {
   display: grid;
   grid-gap: 20px;
   justify-items: center;
-  height: 100vh;
   margin: 0px;
   font-family: IM FELL English SC;
 }
@@ -83,8 +86,6 @@ font-size: 18px;
 
 
 .main {
-  background: url(hpsegundo.jpg);
-  background-repeat: repeat;
   display: flex;
   align-content: center;
   max-width: max-content;
@@ -93,18 +94,14 @@ font-size: 18px;
 
 
 .header {
-    display: flex;
     padding: 0px 0px 50px 80px;
+    text-align: center;
 }
 
 
 .titleTwo {
   text-align: center;
-  justify-content: center;
   font-size: 2em;
-  display: flex;
-  align-content: center;
-  max-width: max-content;
 }
 
 .logo2 {
@@ -169,8 +166,6 @@ margin:0 auto;
 /* Pag 2 */
 
 .dropdown {
-  padding: 20px;
-  max-width: max-content;
   position: relative;
   cursor: pointer;
 }
@@ -183,7 +178,8 @@ margin:0 auto;
   font-size: 16px;
   border: none;
   border-radius: 6px;
-  max-width: max-content;
+  width: 100%;
+  display: block;
   cursor: pointer;
 }
 
@@ -230,6 +226,10 @@ cursor: pointer;
 
 .dropdown:hover .dropbtn {background-color: rgb(170, 97, 97);}
 
+.select {
+  padding: 16px 20px;
+  border-radius: 8px;
+}
 
 .back {
  text-align: center;
@@ -325,11 +325,16 @@ display:grid;
 .characterDetailsList {
   background: url(rayitolonely.png);
   list-style: none;
+  padding: 0;
 }
 
 .characterDetailsList li {
   white-space: nowrap;
   padding: 2px 0;
+}
+.searchInput {
+  border-radius: 6px;
+  padding: 10px 20px;
 }
 
 /* Responsive */

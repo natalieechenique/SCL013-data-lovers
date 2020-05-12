@@ -16,6 +16,7 @@ welcome.classList = "paginaInicio";
 welcome.innerHTML = `
   <section id="welcome" class="welcome">
       <div class="inicio" id="inicio">
+      <img src="./rayo.png" class="logo" alt="rayo" height="100px" weight="50px">
         <h1 class="titulo">Harry Potter <br> Beginners </h1>
         <img src="./lentes.png" class="logo" alt="logo" height="100px" weight="50px">
 
@@ -30,60 +31,64 @@ const paginaPrincipal = document.createElement("div");
 paginaPrincipal.id = "main";
 paginaPrincipal.classList = "main row";
 paginaPrincipal.innerHTML = `
-<div class="header2">
- <h2 class="titleTwo">Harry Potter <br> Beginners </h2>
-<img src="./lentes.png" class="logo2" alt="logo2" height="70px" weight="40px">
+<div class="header">
+  <img src="./rayo.png" class="logo" alt="rayo" height="60px" weight="30px">
+  <h2 class="titleTwo">Harry Potter <br> Beginners </h2>
+  <img src="./lentes.png" class="logo2" alt="logo2" height="70px" weight="40px">
 <div>
 <section id= "filtersSection" class="row filters">
-<div class="dropdown">
-<button class="dropbtn" id="casas">Casas</button>
-<div class="dropdown-content">
-<a id="Gryffindor">Gryffindor </a>
-<a id="Hufflepuff">Hufflepuff </a>
-<a id="Ravenclaw">Ravenclaw </a>
-<a id="Slytherin">Slytherin </a>
+  <div class="dropdown">
+    <button class="dropbtn" id="casas">Casas</button>
+    <div class="dropdown-content">
+    <a id="Gryffindor">Gryffindor </a>
+    <a id="Hufflepuff">Hufflepuff </a>
+    <a id="Ravenclaw">Ravenclaw </a>
+    <a id="Slytherin">Slytherin </a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Personajes</button>
+    <div class="dropdown-content">
+      <a id="femaleGender">Femeninos</a>
+      <a id="maleGender">Masculinos</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Hogwarts</button>
+    <div class="dropdown-content">
+      <a id="hogwartsStudent">Estudiantes</a>
+      <a id="hogwartsStaff">Staff</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Patronus</button>
+  </div>
+
+
+
+  <div id="az">
+    <select id="alphabeticalSearch" class="select">
+      <option value="order">Ordenar</option>
+      <option value="a-z">A-Z</option>
+      <option value="z-a">Z-A</option>
+    </select>
+  </div>
 </div>
+<div class="row">
+  <div class="search">
+    <input class="searchInput" type="search" id="search" placeholder="Buscar por personaje"/>
+    <button class="icon">Buscar</button>
+  </div>
 </div>
 
-<div class="dropdown">
-<button class="dropbtn">Personajes</button>
-<div class="dropdown-content">
-  <a id="femaleGender">Femeninos</a>
-  <a id="maleGender">Masculinos</a>
-</div>
-</div>
 
-<div class="dropdown">
-<button class="dropbtn">Hogwarts</button>
-<div class="dropdown-content">
-<a id="hogwartsStudent">Estudiantes</a>
-<a id="hogwartsStaff">Staff</a>
-</div>
-</div>
 
-<div class="dropdown">
-<button class="btnP">Patronus</button>
-</div>
-</div>
-
-<div class="row actions" id="row">
-<div class="action">
-</div>
-</div>
-
-<div class="search"
-  <input type="search" id="search" placeholder="Buscar por personaje"/>
- <button class="icon"><i class="fa fa-search"></i></button>
-</div>
 
 <nav id="nav">
-<div id="az">
-  <select id="alphabeticalSearch">
-    <option value="order">Ordenar</option>
-    <option value="a-z">A-Z</option>
-    <option value="z-a">Z-A</option>
-  </select>
-</div>
+
 </nav>
 
 <div id="back">
@@ -107,6 +112,9 @@ function clearContent(id) {
 const enterBtn = document.querySelector("#selectEnter");
 enterBtn.addEventListener("click", () => {
   clearContent("#root");
+
+  const body = document.querySelector('body');
+  body.classList = 'filtersBackground';
 
   const resultsContainer = document.createElement("div");
   resultsContainer.id = "results";
