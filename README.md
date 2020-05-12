@@ -140,7 +140,7 @@ Hicimos testeos en 9 usuarios y concluimos lo siguiente:
 
 Para complementar esta investigación, y a modo de nueva estrategia, ya que el link de figma falló bastante durante los testeos, incluimos algunas misiones en "Maze", para poder realizar una interacción efectiva y confirmar conclusiones. Puedes revisar [acá el resultado](https://maze.design/r/7c89cafyk9sgm8nd)
 
-En relación a los resultados de maze, comenzamos construir nuestro código. Decidimos acotar aún más las categorías en el menú, ya que cierta información que propusimos en un principio, no se encuentra en la data. 
+En relación a los resultados de maze, comenzamos construir nuestro código. Decidimos acotar aún más las categorías en el menú, ya que cierta información que propusimos en un principio, no se encuentra en la data. Así, llegamos al siguiente resultado.
 
 
 
