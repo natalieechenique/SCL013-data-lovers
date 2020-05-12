@@ -1,90 +1,63 @@
+import dataPotter from "./data/potter/potter.js";
+import {
+  filterHouse,
+  filterhogwartsStaff,
+  filterhogwartsStudent,
+  filterGender,
+} from "./data.js";
 
-// Importamos desde data.js ,donde se creò una funcion llamada por nosotras "dataPotter"
-// que es la data COMPLETA general del proyecto. Con su console log para revisarlo
-import dataPotter from './data/potter/potter.js'; // <----
-// console.log(filterHogwarts(dataPotter, 'data'));
+// console.log(dataPotter);
 
-// Acá importamos una segunda funcion que creamos en dataPotter.js, que será
-// el primer filtro que realizaremos. Por CASAS. Llamada "filterHouse"
-// Creamos el console.log para revisar ya escribiendo nombres de cada casa
-import { filterHouse } from './data.js'; // <----
-// console.log(filterHogwarts(dataPotter, 'Slytherin'));
+// Definimos los Bloques
 
+const welcome = document.createElement("div");
+welcome.id = "paginaInicio";
+welcome.classList = "paginaInicio";
+welcome.innerHTML = `
+  <section id="welcome" class="welcome">
+      <div class="inicio" id="inicio">
+        <h1 class="titulo">Harry Potter <br> Beginners </h1>
+        <img src="./lentes.png" class="logo" alt="logo" height="100px" weight="50px">
 
-//Creamos la variable const main, que es nuestro div principal con toas las funciones de la pag 2 (funciones principales)
-// Por lo general se crea acá en main.js con la función createElement
-// Agregamos id unico para casa elemento y class que puede ser usada varias veces, para agregar estilos en CSS
-// Finalmente desde ahi se crea un div "hijo" dentro deste div "padre" main, tomamos el documento desde su id "root"(raiz)
-const main = document.createElement('main');
-main.id = 'paginaPrincipal';
-main.classList = 'paginaPrincipal'
-document.getElementById('root').appendChild(main);
+        <p class="textoInicio"><i>Una mágica guía para principiantes y conocedores</i></p>
+        <p class="textoJuro">¡Juro solemnemente que mis intenciones no son buenas!</p>
+        <button class='enterBtn' id='selectEnter'>Entrar</button>
+      </div>
+    </section>
+`;
 
-
-
-// Pagina 1 Ingreso, welcome
-//Ahora declaramos una variable const selectIngreso, con la funcion que toma el documento desde un document.querySelector
-// que toma id y clases (mas global que el getElementByid) tomara el id del boton selectEnter
-//Luego creamos la funcion con la const seklectIngreso que al presionar el boton es tomado por addEventListener
-// para pasar a página 2 creada en la función mainCreate
-const selectIngreso = document.querySelector("#selectEnter");
-selectIngreso.addEventListener("click", () => {
-  mainCreate();
-})
-
-// Creamos la variable const welcome, con id páginaInicio en main y su classList paginaInicio
-// Después tomamos por el id "root" y creamos el hijo "welcome"con nuestro inicio que tendrá tambien el boton entrar boton
-const welcome =  document.createElement('welcome');
-main.id = 'paginaInicio';
-main.classList = 'paginaInicio'
-document.getElementById('root').appendChild(welcome);
-
-
-//_----------------------------------
-// Declaramos aca la variable const mainRoot y tomamos el contenido de todo "root" con querySelector
-const mainRoot = document.querySelector("#root");
-
-// Aca declararemos una funcion vacia, por que le voy a pasar el id de un elemento, para dar las tarjetas filtradas (ahora estan generales)
-// que creare dentro de funcion mainCreate que esta abajo, solo dentro de esa funcion puede modificarlo
- let results;
-
-
-
-//Aca estamos armando una funcion para crear todo lo que esta en main o pagina principal (Que esta vez se armo primero por html),
-//donde van las funciones principales, filtros, personajes, etc, el DIV principal de esa pag//
-// Aca lass comillas francesas `` pueden englobar varias cosas y funciones
-function mainCreate () {
-  mainRoot.innerHTML = `<section id="categorias" class="categorias">
-  <div class="headerDos">
-    <div class="title" id="tittleTwo"> Harry Potter Beginners</div>
-    <div class="logo" id="logo"></div>
-  </div>
-
-  <div class="row cat" id="row">
-
+const paginaPrincipal = document.createElement("div");
+paginaPrincipal.id = "main";
+paginaPrincipal.classList = "main row";
+paginaPrincipal.innerHTML = `
+<div class="header2">
+ <h2 class="titleTwo">Harry Potter <br> Beginners </h2>
+<img src="./lentes.png" class="logo2" alt="logo2" height="70px" weight="40px">
+<div>
+<section id= "filtersSection" class="row filters">
 <div class="dropdown">
 <button class="dropbtn" id="casas">Casas</button>
- <div class="dropdown-content">
-  <a href="#">Gryffindor </a>
-  <a href="#">Hafflepuff </a>
-  <a href="#">Ravenclaw </a>
-  <a href="#">Slytherin </a>
-  </div>
+<div class="dropdown-content">
+<a id="Gryffindor">Gryffindor </a>
+<a id="Hufflepuff">Hufflepuff </a>
+<a id="Ravenclaw">Ravenclaw </a>
+<a id="Slytherin">Slytherin </a>
+</div>
 </div>
 
 <div class="dropdown">
-  <button class="dropbtn">Personajes</button>
-  <div class="dropdown-content">
-    <a href="#">Protagonistas </a>
-    <a href="#">Antagonistas </a>
+<button class="dropbtn">Personajes</button>
+<div class="dropdown-content">
+  <a id="femaleGender">Femeninos</a>
+  <a id="maleGender">Masculinos</a>
 </div>
 </div>
 
 <div class="dropdown">
 <button class="dropbtn">Hogwarts</button>
 <div class="dropdown-content">
-  <a href="#">Estudiantes</a>
-  <a href="#">Staff</a>
+<a id="hogwartsStudent">Estudiantes</a>
+<a id="hogwartsStaff">Staff</a>
 </div>
 </div>
 
@@ -95,81 +68,378 @@ function mainCreate () {
 
 <div class="row actions" id="row">
 <div class="action">
-    <input type="search" id="search" placeholder="Buscar por personaje"/>
-    <button class="icon"><i class="fa fa-search"></i></button>
-  </div>
+</div>
+</div>
 
-    <div class="action">
-        <button class="orderbtn">Ordenar por</button>
-        <!-- <div class="actionorder-content">
-          <a href="#">Femenino</a>
-          <a href="#">Masculino</a> -->
-      </div>
+<div class="search"
+  <input type="search" id="search" placeholder="Buscar por personaje"/>
+ <button class="icon"><i class="fa fa-search"></i></button>
+</div>
 
-    <div class="action">
-      <button class="filterbtn">Filtrar por</button>
-      <!-- <div class="filter-content">
-        <a href="#">Protagonistas </a>
-        <a href="#">Antagonistas </a> -->
-    </div>
-  </div>
-
-  <div class="row results" id="results"></div>
+<nav id="nav">
+<div id="az">
+  <select id="alphabeticalSearch">
+    <option value="order">Ordenar</option>
+    <option value="a-z">A-Z</option>
+    <option value="z-a">Z-A</option>
+  </select>
+</div>
+</nav>
 
 <div id="back">
-<div id="backButton" class="backButton" role="link" onclick="window.location='index.html'">Volver</div>
-
+<div id="backBtn" class="backButton" role="link" onclick="window.location='index.html'">Volver</div>
 </div>
+
+</section>
+
 `;
 
-// Los resultados de las funciones de filtro, seran tomadas con querySelector desde #results
-// y seran impresas o mostradas con la funcion showData, que se declara mas abajo, aca solo la llamamos para no repetir todo
-results = document.querySelector("#results");
-showData();
+// Renderiza sección welcome al cargar el sitio
+document.getElementById("root").appendChild(welcome);
+
+// Funcion para limpiar un contenedor
+function clearContent(id) {
+  document.querySelector(id).innerHTML = "";
 }
 
+//Función para cargar segunda pantalla
+
+const enterBtn = document.querySelector("#selectEnter");
+enterBtn.addEventListener("click", () => {
+  clearContent("#root");
+
+  const resultsContainer = document.createElement("div");
+  resultsContainer.id = "results";
+  resultsContainer.classList = "row results";
+  document.getElementById("root").appendChild(resultsContainer);
+
+  const root = document.querySelector("#root");
+  root.appendChild(paginaPrincipal);
+  root.appendChild(resultsContainer);
+  showData(dataPotter);
+
+  const Gryffindor = document.querySelector("#Gryffindor");
+  Gryffindor.addEventListener("click", () => {
+    clearContent("#results");
+    let gryffindorMembers = filterHouse(dataPotter, "Gryffindor");
+    return showData(gryffindorMembers);
+  });
+
+  const Hufflepuff = document.querySelector("#Hufflepuff");
+  Hufflepuff.addEventListener("click", () => {
+    clearContent("#results");
+    let HufflepuffMembers = filterHouse(dataPotter, "Hufflepuff");
+    return showData(HufflepuffMembers);
+  });
+
+  const Ravenclaw = document.querySelector("#Ravenclaw");
+  Ravenclaw.addEventListener("click", () => {
+    clearContent("#results");
+    let RavenclawMembers = filterHouse(dataPotter, "Ravenclaw");
+    return showData(RavenclawMembers);
+  });
+
+  const Slytherin = document.querySelector("#Slytherin");
+  Slytherin.addEventListener("click", () => {
+    clearContent("#results");
+    let SlytherinMembers = filterHouse(dataPotter, "Slytherin");
+    return showData(SlytherinMembers);
+  });
+
+  const hogwartsStaff = document.querySelector("#hogwartsStaff");
+  hogwartsStaff.addEventListener("click", () => {
+    clearContent("#results");
+    let hogwartsStaff = filterhogwartsStaff(dataPotter);
+    return showData(hogwartsStaff);
+  });
+
+  const hogwartsStudent = document.querySelector("#hogwartsStudent");
+  hogwartsStudent.addEventListener("click", () => {
+    clearContent("#results");
+    let hogwartsStudent = filterhogwartsStudent(dataPotter);
+    return showData(hogwartsStudent);
+  });
+
+  const femaleGender = document.querySelector("#femaleGender");
+  femaleGender.addEventListener("click", () => {
+    clearContent("#results");
+    let femaleGender = filterGender(dataPotter, "female");
+    return showData(femaleGender);
+  });
+
+  const maleGender = document.querySelector("#maleGender");
+  maleGender.addEventListener("click", () => {
+    clearContent("#results");
+    let maleGender = filterGender(dataPotter, "male");
+    return showData(maleGender);
+  });
+});
+
+// const select = document.getElementById("alphabeticalSearch");
+// select.addEventListener("change", () =>{
+//     characters.innerHTML = "";
+//     dataArray=Object.values(dataPotter);
+//     let condition = select.options[select.selectedIndex].index;
+//     let orderResult = orderData(dataArray, condition);
+
+//     for(let i=0;i<orderResult.length;i++){
+//         characters.innerHTML += `
+//         <div id="boton" class="root">
+//              <img src="${orderResult[i].image}" alt="" class="imgButton">
+//              <h3>${orderResult[i].name}</h3>
+//              <p>${orderResult[i].house}</p>
+//          </div>`;
+//          showData();
+//     }
+// })
+
+// <nav id="nav">
+// <div id="az">
+//   <select id="alphabeticalSearch">
+//     <option value="order">Ordenar</option>
+//     <option value="a-z">A-Z</option>
+//     <option value="z-a">Z-A</option>
+//   </select>
+// </div>
+
+// const filter = () =>{
+//   const search = document.querySelector("#search").value;
+//   characters.innerHTML = "";
+//   const informationSearch = search.toLowerCase();
+
+//   for (let i=0; i<dataArray.length; i++){
+//       let characterName = dataArray[i].name.toLowerCase();
+
+//       if(characterName.indexOf(informationSearch) !== -1){
+//           characters.innerHTML += `
+//           <div  class="root">
+//               <img src="${dataArray[i].image}" alt="" class="imgButton">
+//               <h3>${dataArray[i].name}</h3>
+//               <p>${dataArray[i].house}</p>
+//           </div>`;
+//           createModal();
+//       }
+//   }
+//   if (characters.innerHTML === ""){
+//       characters.innerHTML += `
+//       <div  class="root">
+//           <p>Personaje no encontrado...</p>
+//       </div>`;
+//   }
+// }
+// search.addEventListener('keyup', filter)
 
 // Creacion de funcion showData
 // Se va creando uno a uno la tarjeta de personajes recorriendo la dataPotter, creando los div, imagen, detalles
-function showData() {
-  dataPotter.forEach(character => {
-    const container = document.createElement('div');
-    const img = document.createElement('img');
-    const details = document.createElement('div');
-
-
-// container para nombre del personaje en classList "card"
-// container para la imagen del personaje classList "card"
-// Imagen del personaje classList "portrait"
-// Detalles del personaje (al reverso) classList "details"
+function showData(data) {
+  data.forEach((character) => {
+    const container = document.createElement("div");
+    const img = document.createElement("img");
+    const name = document.createElement("div");
+    const details = document.createElement("div");
     container.id = character.name;
-    container.classList = 'card';
+    container.classList = "card";
 
     img.src = character.image;
-    img.classList = 'portrait';
+    img.classList = "portrait";
 
-    details.classList = 'details';
-    details.innerHTML = character.name;
+    name.classList = "characterName";
+    name.innerHTML = `${character.name}`;
 
+    details.classList = "characterDetails";
+    details.innerHTML = `
+      <ul class="characterDetailsList">
+      <li>Especie: ${character.species}</li>
+      <li>Género: ${character.gender}</li>
+      <li>Fecha de nacimiento: ${character.dateOfBirth}</li>
+      <li>Año de nacimiento: ${character.yearOfBirth}</li>
+      <li>Ascendencia: ${character.ancestry}</li>
+      <li>Color de ojos: ${character.eyeColour}</li>
+      <li>Color de cabello: ${character.hairColour}</li>
+      <li>Actor/Actriz: ${character.actor}</li>
+      <li>Estado: ${character.alive ? "Vivo" : "Muerto"}</li><br>
+      <h4>Varita mágica</h4>
+      <li>Madera: ${character.wand.wood}</li>
+      <li>Núcleo: ${character.wand.core}</li>
+      <li>Longitud: ${character.wand.length}</li>
+      <li>Patronus: ${character.patronus}</li>
+      </ul>
+    `;
 
     container.appendChild(img);
+    container.appendChild(name);
     container.appendChild(details);
 
-    // Muestro los resultados de cada personajepor nombre con innerHTML en HTML
+    // Muestro los resultados de cada personaje por nombre con innerHTML en HTML
+    const results = document.querySelector('#results');
     results.appendChild(container);
-  // aca pego la tarjeta de cada mono en results
-});
+    // aca pego la tarjeta de cada personaje en results
+  });
 }
 
+// // Filtrar por casas
 
+// const Gryffindor = document.querySelector("#Gryffindor");
+// Gryffindor.addEventListener("click", () => {
+//   clearContent("#results");
+//   let gryffindorMembers = filterHouse(dataPotter, "Gryffindor");
+//   return showData(gryffindorMembers);
+// });
+
+// const Hufflepuff = document.querySelector("#Hufflepuff");
+// Hufflepuff.addEventListener("click", () => {
+//   clearContent("#results");
+//   let HufflepuffMembers = filterHouse(dataPotter, "Hufflepuff");
+//   return showData(HufflepuffMembers);
+// });
+
+// const Ravenclaw = document.querySelector("#Ravenclaw");
+// Ravenclaw.addEventListener("click", () => {
+//   clearContent("#results");
+//   let RavenclawMembers = filterHouse(dataPotter, "Ravenclaw");
+//   return showData(RavenclawMembers);
+// });
+
+// const Slytherin = document.querySelector("#Slytherin");
+// Slytherin.addEventListener("click", () => {
+//   clearContent("#results");
+//   let SlytherinMembers = filterHouse(dataPotter, "Slytherin");
+//   return showData(SlytherinMembers);
+// });
+
+// const hogwartsStaff = document.querySelector("#hogwartsStaff");
+// hogwartsStaff.addEventListener("click", () => {
+//   clearContent("#results");
+//   let hogwartsStaff = filterhogwartsStaff(dataPotter);
+//   return showData(hogwartsStaff);
+// });
+
+// const hogwartsStudent = document.querySelector("#hogwartsStudent");
+// hogwartsStudent.addEventListener("click", () => {
+//   clearContent("#results");
+//   let hogwartsStudent = filterhogwartsStudent(dataPotter);
+//   return showData(hogwartsStudent);
+// });
+
+//Aca estamos armando una funcion para crear todo lo que esta en main o pagina principal (Que esta vez se armo primero por html),
+//donde van las funciones principales, filtros, personajes, etc, el DIV principal de esa pag//
+// Aca lass comillas francesas `` pueden englobar varias cosas y funciones
+// function mainCreate() {
+//   mainRoot.innerHTML = `<section id="categorias" class="categorias">});
+
+//Aca estamos armando una funcion para crear todo lo que esta en main o pagina principal (Que esta vez se armo primero por html),
+//donde van las funciones principales, filtros, personajes, etc, el DIV principal de esa pag//
+// Aca lass comillas francesas `` pueden englobar varias cosas y funciones
+// function mainCreate() {
+//   mainRoot.innerHTML = `<section id="categorias" class="categorias">});
+
+//Aca estamos armando una funcion para crear todo lo que esta en main o pagina principal (Que esta vez se armo primero por html),
+//donde van las funciones principales, filtros, personajes, etc, el DIV principal de esa pag//
+// Aca lass comillas francesas `` pueden englobar varias cosas y funciones
+// function mainCreate() {
+//   mainRoot.innerHTML = `<section id="categorias" class="categorias">});
+
+//Aca estamos armando una funcion para crear todo lo que esta en main o pagina principal (Que esta vez se armo primero por html),
+//donde van las funciones principales, filtros, personajes, etc, el DIV principal de esa pag//
+// Aca lass comillas francesas `` pueden englobar varias cosas y funciones
+// function mainCreate() {
+//   mainRoot.innerHTML = `<section id="categorias" class="categorias">});
+
+//Aca estamos armando una funcion para crear todo lo que esta en main o pagina principal (Que esta vez se armo primero por html),
+//donde van las funciones principales, filtros, personajes, etc, el DIV principal de esa pag//
+// Aca lass comillas francesas `` pueden englobar varias cosas y funciones
+// function mainCreate() {
+//   mainRoot.innerHTML = `<section id="categorias" class="categorias">});
+
+//Aca estamos armando una funcion para crear todo lo que esta en main o pagina principal (Que esta vez se armo primero por html),
+//donde van las funciones principales, filtros, personajes, etc, el DIV principal de esa pag//
+// Aca lass comillas francesas `` pueden englobar varias cosas y funciones
+// function mainCreate() {
+//   mainRoot.innerHTML = `<section id="categorias" class="categorias">
+//   <div class="headerDos">
+//     <div class="title" id="tittleTwo"> Harry Potter Beginners</div>
+//     <div class="logo" id="logo"></div>
+//   </div>
+
+//   <div class="row cat" id="row">
+
+// <div class="dropdown">
+// <button class="dropbtn" id="casas">Casas</button>
+//  <div class="dropdown-content">
+//   <a id="Gryffindor" href="#">Gryffindor </a>
+//   <a id="Hafflepuffhref" ="#">Hafflepuff </a>
+//   <a id="Ravenclaw" href="#">Ravenclaw </a>
+//   <a id="Slytherin" href="#">Slytherin </a>
+//   </div>
+// </div>
+
+// <div class="dropdown">
+//   <button class="dropbtn">Personajes</button>
+//   <div class="dropdown-content">
+//     <a href="#">Protagonistas </a>
+//     <a href="#">Antagonistas </a>
+// </div>
+// </div>
+
+// <div class="dropdown">
+// <button class="dropbtn">Hogwarts</button>
+// <div class="dropdown-content">
+//   <a href="#">Estudiantes</a>
+//   <a href="#">Staff</a>
+// </div>
+// </div>
+
+// <div class="dropdown">
+// <button class="btnP">Patronus</button>
+// </div>
+// </div>
+
+// <div class="row actions" id="row">
+// <div class="action">
+//     <input type="search" id="search" placeholder="Buscar por personaje"/>
+//     <button class="icon"><i class="fa fa-search"></i></button>
+//   </div>
+
+//     <div class="action">
+//         <button class="orderbtn">Ordenar por</button>
+//         <!-- <div class="actionorder-content">
+//           <a href="#">Femenino</a>
+//           <a href="#">Masculino</a> -->
+//       </div>
+
+//     <div class="action">
+//       <button class="filterbtn">Filtrar por</button>
+//       <!-- <div class="filter-content">
+//         <a href="#">Protagonistas </a>
+//         <a href="#">Antagonistas </a> -->
+//     </div>
+//   </div>
+
+//   <div id="backButton" class="backBtn" role="link" onclick="window.location='index.html'">Volver
+//   </div>
+
+//   <div class="row results" id="results"></div>
+
+// </div>
+// `;
+
+// Los resultados de las funciones de filtro, seran tomadas con querySelector desde #results
+// y seran impresas o mostradas con la funcion showData, que se declara mas abajo, aca solo la llamamos para no repetir todo
+// results = document.querySelector("#results");
+// showData(filteredData);
+// }
+
+//------------------------------------------------------------
 // Buscador por nombre//
-let buscador = document.createElement ("buscador")
-buscador.id ="buscar"
-buscador.innerHTML = "buscar"
-buscador.appendChild(buscador)
-getElementById(row)
 
+// const buscador = document.createElement("buscador")
+// buscador.id = "buscar"
+// buscador.innerHTML = "buscar"
+// buscador.appendChild(buscador)
+// getElementById(row)
 
+//------------------------------------------------------------
+// Ordenar
 
 // let dataArray
 // let dataOrder=data
@@ -192,22 +462,8 @@ getElementById(row)
 //     }
 // })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // -------------------------------------------------
+// MODAL
 
 // // const filter
 // const characters
@@ -240,74 +496,67 @@ getElementById(row)
 // }
 // search.addEventListener('keyup', filter)
 
+//Creamos el modal de cada personaje con su correspondiente información
+// function createMod () {
+//     let createMod=document.getElementById("myModal"); //Modal general html
+//     let createModContainer = document.getElementById("modalContent"); //Modal cuadrito blanco html
+//     let imgButton=document.getElementsByClassName("imgButton"); //imagen que actua como boton. Ingresada en el js
+//     modal.style.display = "none"; //Para esconder el modal general al cargar la página
 
+//     for(let i=0; i<imgButton.length; i++){ //recorremos el for de las imagenes que creamos
+//         let img=imgBtn[i]; //guardamos cada imagen en una variable con posición i
 
-// // // Modal para cada personaje-detalles
-// function createMod (){
-//   let mod=document.getElementById("modContent");
-//   let modContainer = document.getElementById("modContent")
-// let imgBtn=document.getElementsByClassName("imgBtn");
-// mod.style.display = "none;
-// for (length(let i=0; i<imgBt[i].length; i++){
-//   img=imgBtn[i];
-//   img.addEventListener ('click',()=> {
-//     mod.style.display = "block";
+//         img.addEventListener ('click', ()=>{ //agregamos el evento a la imagen
+//             modal.style.display = "block"; //al hacer click traemos el modal general
 
-// //     modContainer.innerHTML+=`
-//     <div class="frame">
-//     <div class "cerrar">
-//     <span class="close">&times;</span>
+//creamos el modal html en el js. /modal cuadrito blanco
+// modContainer.innerHTML += `
+// <div class="frame">
+//     <div class="x">
+//         <span class="close">&times;</span>
 //     </div>
-
-//     <div class= "modDetails">
-//     <div class="details">
-//     <img src= "${dataPotterArr[i].image} alt"Detalles" class="imgBtn">
-//     <h3>$dataPotterArr[i].house</h3>
-//     <p>$dataPotterArr[i].actor</p>
+//     <div  class="modCharacters">
+//         <div class="characterInformation">
+//             <img src="${dataPotterArr[i].image}" alt="" class="imgButton">
+//             <h3>${dataPotterArr[i].name}</h3>
+//             <p>${dataPotterArr[i].house}</p>
+//         </div>
+//         <div class="characterInformation2">
+//             <p>Especie: ${dataPotterArr[i].species}</p>
+//             <p>Género: ${dataPotterArr[i].gender}</p>
+//             <p>Fecha de nacimiento: ${dataPotterArr[i].dateOfBirth}</p>
+//             <p>Año de nacimiento: ${dataPotterArr[i].yearOfBirth}</p>
+//             <p>Ascendencia: ${dataPotterArr[i].ancestry}</p>
+//             <p>Color de ojos: ${dataPotterArr[i].eyeColour}</p>
+//             <p>Color de cabello: ${dataPotterArr[i].hairColour}</p>
+//             <p>Actor/Actriz: ${dataPotterArr[i].actor}</p>
+//             <p>Estado: ${dataPotterArr[i].alive}</p><br>
+//             <h4>Varita mágica</h4>
+//             <p>Madera: ${dataPotterArr[i].wand.wood}</p>
+//             <p>Núcleo: ${dataPotterArr[i].wand.core}</p>
+//             <p>Longitud: ${dataPotterArr[i].wand.length}</p>
+//             <p>Patronus: ${dataPotterArr[i].patronus}</p>
+//         </div>
 //     </div>
+// </div>`;
 
-//     <div class="details">
-//     <P>Especie: ${dataPotterArr[i].species}</p>
-//     <p>Género: ${dataPotterArr[i].gender}</p></p>
-//     <p>Fecha de nacimiento: ${dataPotterArr[i].dateOfBirth}</p>
-//     <p>Ascendencia: ${dataPotterArr[i].yearOfBirth}</p></p>
-//     <p>Color de ojos: ${dataPotterArr[i].eyeColour}</p></p>
-//     <p>Color de cabello: ${dataPotterArr[i].hairColour}</p></p>
-//     <p>Actor/actriz: ${dataPotterArr[i].actor}</p></p>
-//     <p>Estado: ${dataPotterArr[i].alive}</p></p>
-//     <h4>Varita/h4>
-//     <p>Madera: ${dataPotterArr[i].wand.wood}</p></p>
-//     <p>Núcleo: ${dataPotterArr[i].wand.core}</p></p>
-//     <p>Longitud: ${dataPotterArr[i].wand.length}</p></p>
-//     <p>Patronus: ${dataPotterArr[i].patronus}</p></p>
-//     </div>
-//     </div>
-//     `;
-//   }
+//     let span = document.getElementsByClassName("close")[0]; // al momento de cerrar, hace este evento/
+//     span.addEventListener('click', ()=>{ //evento del click en la x
+//         mod.style.display = "none"; //Escondemos el modal general
+//         modContainer.innerHTML="";  //Limpiamos el modal con la informacion (cuadrito blanco)
+//     });
+// });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//         window.onclick = function(event) { //evento para que al hacer click fuera del modal se cierre
+//             if (event.target == mod) {
+//               mod.style.display = "none";
+//               modContainer.innerHTML="";
+//             }
+//         }
+//     }
+// }
 
 //----------------------------------------------------------------//
-// POR ACA HAY PURA CHALLA O PRUEBAS AUN
-
-
 
 // import data from './data/potter/potter.js'
 // import orderData from './data.js';
@@ -319,7 +568,6 @@ getElementById(row)
 //     document.getElementById("welcome").style.display = "none";
 //     document.getElementById("homePage").style.display = "block";
 // });
-
 
 // //Traemos todos los personajes al inicio de la página
 // const dataPotter=data;
@@ -335,68 +583,9 @@ getElementById(row)
 //     createModal();
 // // }
 
+//------------------------------------------------------
+// Ordenar
 
-
-
-//Creamos el modal de cada personaje con su correspondiente información
-// function createMod () {
-//     let createMod=document.getElementById("myModal"); //Modal general html
-//     let createModContainer = document.getElementById("modalContent"); //Modal cuadrito blanco html
-//     let imgButton=document.getElementsByClassName("imgButton"); //imagen que actua como boton. Ingresada en el js
-//     modal.style.display = "none"; //Para esconder el modal general al cargar la página
-
-//     for(let i=0; i<imgButton.length; i++){ //recorremos el for de las imagenes que creamos
-//         let img=imgBtn[i]; //guardamos cada imagen en una variable con posición i
-
-//         img.addEventListener ('click', ()=>{ //agregamos el evento a la imagen
-//             modal.style.display = "block"; //al hacer click traemos el modal general
-
-            //creamos el modal html en el js. /modal cuadrito blanco
-            // modContainer.innerHTML += `
-            // <div class="frame">
-            //     <div class="x">
-            //         <span class="close">&times;</span>
-            //     </div>
-            //     <div  class="modCharacters">
-            //         <div class="characterInformation">
-            //             <img src="${dataPotterArr[i].image}" alt="" class="imgButton">
-            //             <h3>${dataPotterArr[i].name}</h3>
-            //             <p>${dataPotterArr[i].house}</p>
-            //         </div>
-            //         <div class="characterInformation2">
-            //             <p>Especie: ${dataPotterArr[i].species}</p>
-            //             <p>Género: ${dataPotterArr[i].gender}</p>
-            //             <p>Fecha de nacimiento: ${dataPotterArr[i].dateOfBirth}</p>
-            //             <p>Año de nacimiento: ${dataPotterArr[i].yearOfBirth}</p>
-            //             <p>Ascendencia: ${dataPotterArr[i].ancestry}</p>
-            //             <p>Color de ojos: ${dataPotterArr[i].eyeColour}</p>
-            //             <p>Color de cabello: ${dataPotterArr[i].hairColour}</p>
-            //             <p>Actor/Actriz: ${dataPotterArr[i].actor}</p>
-            //             <p>Estado: ${dataPotterArr[i].alive}</p><br>
-            //             <h4>Varita mágica</h4>
-            //             <p>Madera: ${dataPotterArr[i].wand.wood}</p>
-            //             <p>Núcleo: ${dataPotterArr[i].wand.core}</p>
-            //             <p>Longitud: ${dataPotterArr[i].wand.length}</p>
-            //             <p>Patronus: ${dataPotterArr[i].patronus}</p>
-            //         </div>
-            //     </div>
-            // </div>`;
-
-        //     let span = document.getElementsByClassName("close")[0]; // al momento de cerrar, hace este evento/
-        //     span.addEventListener('click', ()=>{ //evento del click en la x
-        //         mod.style.display = "none"; //Escondemos el modal general
-        //         modContainer.innerHTML="";  //Limpiamos el modal con la informacion (cuadrito blanco)
-        //     });
-        // });
-
-//         window.onclick = function(event) { //evento para que al hacer click fuera del modal se cierre
-//             if (event.target == mod) {
-//               mod.style.display = "none";
-//               modContainer.innerHTML="";
-//             }
-//         }
-//     }
-// }
 //Ordenamos todos los personajes en orden alfabético
 // const select = document.getElementById("alphSearch");
 // select.addEventListener("change", () =>{
@@ -416,7 +605,7 @@ getElementById(row)
 //     }
 // })
 
-
+//----------------------------------------------------------
 // filtro de búsqueda
 // const filter = () =>{
 //     const search = document.querySelector("#search").value;
@@ -444,13 +633,6 @@ getElementById(row)
 //     }
 // }
 // search.addEventListener('keyup', filter)
-
-
-
-
-
-
-
 
 // buscador.addEventListener('keyup', () => {
 //   port.classList.add('hide');
@@ -496,7 +678,6 @@ getElementById(row)
 //   });
 // });
 
-
 // let backBtn = document.createElement ("button")
 // backBtn.id ="back"
 // backBtn.classList="backBtn"
@@ -506,7 +687,6 @@ getElementById(row)
 // getElementById(main)
 
 // <a href="javascript:history.go(-1)">Atrás</a>
-
 
 // const characterHouse = document.getElementById("Gryffindor");
 // console.log(Gryffyndor);
@@ -538,40 +718,3 @@ getElementById(row)
 //   let ravenclawMembers = filterByHouse(charactersData, "Ravenclaw");
 //   return showHouseMembers(ravenclawMembers);
 // });
-
-
-// const EscudoGry = document.getElementById("EscudoGry");
-//   EscudoGry.addEventListener("click", (event) => {
-//     let gryffindorMembers = filterByHouse(charactersData, "Gryffindor");
-//     event.preventDefault();
-//     return showHouseMembers(gryffindorMembers);
-//   });
-
-//   const EscudoRaven = document.getElementById("EscudoRaven");
-//   EscudoRaven.addEventListener("click", (event) => {
-//     event.preventDefault();
-//     let ravenclawMembers = filterByHouse(charactersData, "Ravenclaw");
-//     return showHouseMembers(ravenclawMembers);
-//   });
-
-//   const EscudoHuffle = document.getElementById("EscudoHuffle");
-//   EscudoHuffle.addEventListener("click", (event) => {
-//     event.preventDefault();
-//     let hufflepuffwMembers = filterByHouse(charactersData, "Hufflepuff");
-//     return showHouseMembers(hufflepuffwMembers);
-//   });
-
-//   const EscudoSly = document.getElementById("EscudoSly");
-//   EscudoSly.addEventListener("click", (event) => {
-//     event.preventDefault();
-//     let slytherinMembers = filterByHouse(charactersData, "Slytherin");
-//     return showHouseMembers(slytherinMembers);
-//   });
-
-
-// //1. FUNCIÓN PARA MOSTRAR LA PANTALLA DE CADA CASA (la única con createElement XD)
-// function showHouseMembers(houseMembers) {
-//   clearInnerContent(); //se borra el contenido anterior que está en .inner-content
-//   //MenuPrincipal(); //3. crea estructura del menú (provisorio)
-//   const innerContentSection = document.querySelector(".inner-content");
-//   const sectionTitle = document.querySelector(".section-title");

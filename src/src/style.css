@@ -1,28 +1,39 @@
-@media screen and (max-width: 400px) {
-}
-
 
 *{
-  font-family:'IM fell English', serif;
+  font-family: 'IM Fell English', serif;
   margin: 0px;
   padding: 0px;
+  box-sizing: cover;
 }
 
 /*
 Agregar la class al lado de body con un punto y el 2do fondo */
 
+@media only screen and (max-width: 767px) {
 body {
-  background: url(hpsegundo.jpg);
+  background: url(fondopagina.jpg);
   background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #d39963;
+  background-size: cover;
+  height: 100vh;
+}
 }
 
 
+/*
+-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+
 .welcome {
-  margin: 0px;
+  display:grid;
+    margin: 0px;
   padding: 20px;
-  display: grid;
   grid-gap: 20px;
   }
+
 
 
 .inicio {
@@ -34,7 +45,6 @@ body {
   justify-items: center;
   height: 100vh;
   margin: 0px;
-  font-family: IM FELL English SC;
 }
 
 
@@ -52,75 +62,33 @@ body {
 .textoInicio{
   font-size: 2em;
   margin-bottom: 40px;
-  font-family: IM FELL English SC;
 }
 
 .textoJuro{
   text-align: center;
-    width: 67%;
-    left: 50%;
-    top: 70%;
-    font-family: IM FELL English SC;
-    font-size: 2em;
-
-
+  width: 67%;
+  font-size: 2em;
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
 }
 
 
 
 
 
-/*footer{
+footer{
 /* background-color: rgb(236, 176, 98); */
-/* text-align: center;
+text-align: center;
+padding: 20px;
 font-style: italic;
 font-size: 18px;
-} */
+}
+
 
 
 /* PAG 2 */
 
-
-
-.main {
-  background: url(hpsegundo.jpg);
-  background-repeat: repeat;
-  display: flex;
-  align-content: center;
-  max-width: max-content;
-
-}
-
-
-.header {
-    display: flex;
-    padding: 0px 0px 50px 80px;
-}
-
-
-.titleTwo {
-  text-align: center;
-  justify-content: center;
-  font-size: 2em;
-  display: flex;
-  align-content: center;
-  max-width: max-content;
-}
-
-.logo2 {
-  height: 50px;
-  align-content:center;
-  align-items:center;
-  margin: 0px;
-}
-
-/* .menu-container {
-  display:grid;
-  align-content: center;
-  align-items: center;
-  padding: 20px;
-}
-.row {
+/* .body.main {
   background: url(hpsegundo.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -128,8 +96,33 @@ font-size: 18px;
   padding: 20px;
   display: grid;
   grid-gap: 20px;
-  text align-items: center; */
+  /* text align-items: center; */
 /* } */
+
+
+/* .main{
+  /* background: url(hpsegundo.jpg);
+  background-repeat: repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #d39963;
+  background-size: cover; */
+/* } */
+
+
+.header {
+  display:grid;
+  align-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.tittleTwo {
+  text-align: center;
+  justify-content: center;
+  font-size: 3em;
+} */
+
 
 .row {
   width:900px;
@@ -153,7 +146,7 @@ margin:0 auto;
 
 /* Pag 1 */
 #selectEnter {
-  font-family: 'IM Fell English SC';
+  font-family: IM FELL English SC;
   background-color:rgb(114, 48, 48);
   color: black;
   font-size: 24px;
@@ -167,12 +160,10 @@ margin:0 auto;
 
 
 /* Pag 2 */
-
 .dropdown {
   padding: 20px;
   max-width: max-content;
   position: relative;
-  cursor: pointer;
 }
 
 .dropbtn {
@@ -184,8 +175,12 @@ margin:0 auto;
   border: none;
   border-radius: 6px;
   max-width: max-content;
-  cursor: pointer;
 }
+
+.dropdown.order{
+  background-color: rgb(248, 224, 224);
+}
+
 
 .btnP {
   background-color: rgb(165, 88, 88);
@@ -210,7 +205,6 @@ margin:0 auto;
   justify-content: center;
 margin:10;
 max-width: max-content;
-cursor: pointer;
 }
 
 .dropdown-content a {
@@ -221,7 +215,6 @@ cursor: pointer;
   justify-content: center;
 margin:10;
 max-width: max-content;
-cursor: pointer;
 }
 
 .dropdown-content a:hover {background-color: rgb(145, 110, 110);}
@@ -232,27 +225,23 @@ cursor: pointer;
 
 
 .back {
- text-align: center;
+  display:flex;
+  align-items: left;
+  align-content: center;
   max-width: max-content;
-  display: flex;
-  align-content: bottom;
 }
 
 .backBtn {
-  display: flex;
-  align-content: left;
   font-family: IM FELL English SC;
   background-color:rgb(104, 83, 117);
   color: black;
   padding: 10px 20px;
   font-size: 24px;
   border: 1px solid rgb(68, 56, 56);
-  text-align:center;
-  align-content: right;
   border-radius: 6px;
   cursor: pointer;
   transition: 0.4s;
-
+  text-align:center;
 }
 
 
@@ -268,7 +257,7 @@ cursor: pointer;
 }
 
 .action{
-  padding: 0px;
+  padding: 20px;
 display:grid;
 }
 
@@ -278,6 +267,15 @@ display:grid;
   overflow: hidden;
   position: relative;
 }
+
+.characterDetails {
+  background-image: url(rayitolonely.npg);
+  list-style: none;
+  text-align: left;
+  font-size: 10px;
+  background: 'red';
+}
+
 
 .portrait {
   object-fit: cover;
@@ -303,34 +301,6 @@ display:grid;
 
 
 
-.characterDetails {
-
-  opacity: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-  position: absolute;
-  top: 0;
-  font-size: 12px;
-  padding: 15px;
-  height: 100%;
-  width: 100%;
-  background: black;
-  color: white;
-  transition: .4s;
-}
-
-.characterDetails:hover {
-  opacity: 100;
-}
-
-.characterDetailsList {
-  background: url(rayitolonely.png);
-  list-style: none;
-}
-
-.characterDetailsList li {
-  white-space: nowrap;
-  padding: 2px 0;
-}
 
 /* Responsive */
 
