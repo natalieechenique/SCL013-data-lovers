@@ -1,321 +1,390 @@
+/* @media screen and (max-width: 400px) {
+} */
+
+
 *{
-  font-family: 'IM Fell English';
+  font-family:'IM fell English', serif;
   margin: 0px;
-  padding: 0px;
+  /* padding: 0px; */
 }
-body{
-  background-image: url(HP.jpg);
-  height: 100vh;
-  /*width: 100vw;*/
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-   
+
+/*
+Agregar la class al lado de body con un punto y el 2do fondo */
+
+body {
+  background-image: url("fondopagina.jpg");
+  background-repeat: repeat-y;
+  background-size: 100%;
 }
+
+.filtersBackground {
+  background-image: url("hpsegundo.jpg");
+}
+
 .welcome {
-  background: url(fondopagina.jpg);
-  -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    margin: 0px;
+  margin: 0px;
   padding: 20px;
   display: grid;
   grid-gap: 20px;
   }
-  .inicio {
-    color: black;
-    align-content:center;
-    text-align: center;
-    display: grid;
-    grid-gap: 20px;
-    justify-items: center;
-    height: 100vh;
-    margin: 0px;
-    font-family: IM FELL English SC;
-  }
-  .logo {
-    height: 100px;
-    align-content:center;
-    align-items:center;
-    margin: 0px;
-  }
- .titulo1 {
-    font-size: 2.5em;
-  }
-  .textoInicio{
-    font-size: 2em;
-    margin-bottom: 40px;
-    font-family: IM FELL English SC;
-  }
-  .textoJuro{
-    text-align: center;
-      width: 67%;
-      left: 50%;
-      top: 70%;
-      font-family: IM FELL English SC;
-      font-size: 2em;
-  }
-  /*footer{
-  /* background-color: rgb(236, 176, 98); */
-  /* text-align: center;
-  font-style: italic;
-  font-size: 18px;
-  } */
-  /* PAG 2 */
-  .categorias {
-    display: flex;
-    align-content: center;
-    max-width: max-content;
-  }
-  .headerTwo {
-    border: 1px solid rgb(10, 19, 73);
-    padding: 20px;
-    display: flex;
-    align-content: top;
-    max-width: max-content;
-    text-align: center;
-    align-items: baseline;
-  }
-  .tittleTwo {
-    display: grid;
-    grid-auto-rows:2px ;
-    text-align: center;
-    justify-content: center;
-    font-size: 3em;
-    display: flex;
-    align-content: center;
-    max-width: max-content;
-  }
-  /* .menu-container {
-    display:grid;
-    align-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  .row {
-    background: url(hpsegundo.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-    padding: 20px;
-    display: grid;
-    grid-gap: 20px;
-    text align-items: center; */
-  /* } */
-  .row {
-    width:900px;
-    max-width: 90%;
-    padding: 20px;
+
+
+.inicio {
+  color: black;
+  align-content:center;
+  text-align: center;
   display: grid;
-  /* Genera cantidad de columnas  */
-  grid-gap:20px;
-  justify-content: center;
-  margin:0 auto;
-  }
-  .row.filters {
-    grid-template-columns: repeat(auto-fit, minmax(0,1fr));
-  }
-  /* Botones y drop down */
-  /* Pag 1 */
-  #selectEnter {
-    font-family: 'IM Fell English SC';
-    background-color:rgb(114, 48, 48);
-    color: black;
-    font-size: 24px;
-    border: 1px solid rgb(68, 56, 56);
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.4s;
-    max-width: max-content;
-    padding: 10px 20px;
-  }
-  /* Pag 2 */
-  .dropdown {
-    padding: 20px;
-    max-width: max-content;
-    position: relative;
-    cursor: pointer;
-  }
-  .dropbtn {
-    background-color: rgb(165, 88, 88);
-    color: rgb(0, 0, 0);
-    grid-gap:20px;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    max-width: max-content;
-    cursor: pointer;
-  }
-  .btnP {
-    background-color: rgb(165, 88, 88);
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    grid-gap:20px;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    max-width: max-content;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(167, 75, 70, 0.67);;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    z-index: 1;
-    border-radius: 6px;
-    padding: 8px;
-    justify-content: center;
-  margin:10;
-  max-width: max-content;
-  cursor: pointer;
-  }
-  .dropdown-content a {
-    color: rgb(0, 0, 0);
-    padding: 5px 8px;
-    text-decoration: none;
-    display: block;
-    justify-content: center;
-  margin:10;
-  max-width: max-content;
-  cursor: pointer;
-  }
-  .dropdown-content a:hover {background-color: rgb(145, 110, 110);}
-  .dropdown:hover .dropdown-content {display: block;}
-  .dropdown:hover .dropbtn {background-color: rgb(170, 97, 97);}
-  .back {
-   text-align: center;
-    max-width: max-content;
-    display: flex;
-    align-content: bottom:
-  }
-  .backBtn {
-    display: flex;
-    align-content: ;
+  grid-gap: 20px;
+  justify-items: center;
+  margin: 0px;
+  font-family: IM FELL English SC;
+}
+
+
+.logo {
+  height: 100px;
+  align-content:center;
+  align-items:center;
+  margin: 0px;
+}
+
+.titulo {
+  font-size: 3em;
+}
+
+.textoInicio{
+  font-size: 2em;
+  margin-bottom: 40px;
+  font-family: IM FELL English SC;
+}
+
+.textoJuro{
+  text-align: center;
+    width: 67%;
+    left: 50%;
+    top: 70%;
     font-family: IM FELL English SC;
-    background-color:rgb(104, 83, 117);
-    color: black;
-    padding: 10px 20px;
-    font-size: 24px;
-    border: 1px solid rgb(68, 56, 56);
-    text-align:center;
-    align-content: right;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.4s;
-  }
-  /* Resultados */
-  .row.actions {
-    grid-template-columns: repeat(auto-fit, minmax(0,200px));
-  }
-  .row.results {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  .action{
-    padding: 0px;
-  display:grid;
-  }
-  .card {
-    border-radius: 6px;
-    max-height: 300px;
-    overflow: hidden;
-    position: relative;
-  }
-  .portrait {
-    object-fit: cover;
-    min-width: 100%;
-    min-height: 100%;
-    width: 100%;
-    height: 100%;
-  }
-  .characterName {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background:rgba(0,0,0,0.7);
-    color: white;
-    display: grid;
-    grid-gap: 20px;
-    width: 100%;
+    font-size: 2em;
+
+
+}
+
+
+
+
+
+/*footer{
+/* background-color: rgb(236, 176, 98); */
+/* text-align: center;
+font-style: italic;
+font-size: 18px;
+} */
+
+
+/* PAG 2 */
+
+
+
+.main {
+  display: flex;
+  align-content: center;
+  max-width: max-content;
+
+}
+
+
+.header {
+    padding: 0px 0px 50px 80px;
     text-align: center;
-    padding: 10px 20px;
-    font-size: 18px;
+}
+
+
+.titleTwo {
+  text-align: center;
+  font-size: 2em;
+}
+
+.logo2 {
+  height: 50px;
+  align-content:center;
+  align-items:center;
+  margin: 0px;
+}
+
+/* .menu-container {
+  display:grid;
+  align-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.row {
+  background: url(hpsegundo.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  padding: 20px;
+  display: grid;
+  grid-gap: 20px;
+  text align-items: center; */
+/* } */
+
+.row {
+  width:900px;
+  max-width: 90%;
+  padding: 20px;
+display: grid;
+/* Genera cantidad de columnas  */
+grid-gap:20px;
+justify-content: center;
+margin:0 auto;
+}
+
+.row.filters {
+  grid-template-columns: repeat(auto-fit, minmax(0,1fr));
+}
+
+
+
+
+/* Botones y drop down */
+
+/* Pag 1 */
+#selectEnter {
+  font-family: 'IM Fell English SC';
+  background-color:rgb(114, 48, 48);
+  color: black;
+  font-size: 24px;
+  border: 1px solid rgb(68, 56, 56);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+  max-width: max-content;
+  padding: 10px 20px;
+}
+
+
+/* Pag 2 */
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropbtn {
+  background-color: rgb(165, 88, 88);
+  color: rgb(0, 0, 0);
+  grid-gap:20px;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.btnP {
+  background-color: rgb(165, 88, 88);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  grid-gap:20px;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  max-width: max-content;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #b85555;
+  box-shadow: 0px 8px 16px 0px rgba(255, 162, 159, 0.795);
+  z-index: 1;
+  border-radius: 6px;
+  padding: 8px;
+  justify-content: center;
+margin:10;
+max-width: max-content;
+cursor: pointer;
+}
+
+.dropdown-content a {
+  color: rgb(0, 0, 0);
+  padding: 5px 8px;
+  text-decoration: none;
+  display: block;
+  justify-content: center;
+margin:10;
+max-width: max-content;
+cursor: pointer;
+}
+
+.dropdown-content a:hover {background-color: rgb(145, 110, 110);}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: rgb(170, 97, 97);}
+
+.select {
+  padding: 16px 20px;
+  border-radius: 8px;
+}
+
+.back {
+ text-align: center;
+  max-width: max-content;
+  display: flex;
+  align-content: bottom;
+}
+
+.backBtn {
+  display: flex;
+  align-content: left;
+  font-family: IM FELL English SC;
+  background-color:rgb(104, 83, 117);
+  color: black;
+  padding: 10px 20px;
+  font-size: 24px;
+  border: 1px solid rgb(68, 56, 56);
+  text-align:center;
+  align-content: right;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+
+}
+
+
+
+/* Resultados */
+
+.row.actions {
+  grid-template-columns: repeat(auto-fit, minmax(0,200px));
+}
+
+.row.results {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.action{
+  padding: 0px;
+display:grid;
+}
+
+.card {
+  border-radius: 6px;
+  max-height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.portrait {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.characterName {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background:rgba(0,0,0,0.7);
+  color: white;
+  display: grid;
+  grid-gap: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+
+
+.characterDetails {
+
+  opacity: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  padding: 15px;
+  height: 100%;
+  width: 100%;
+  background: black;
+  color: white;
+  transition: .4s;
+}
+
+.characterDetails:hover {
+  opacity: 100;
+}
+
+.characterDetailsList {
+  background: url(rayitolonely.png);
+  background-size: 80%;
+  background-position: center;
+  list-style: none;
+  padding: 0;
+
+}
+
+.characterDetailsList li {
+  white-space: nowrap;
+  padding: 2px 0;
+}
+.searchInput {
+  border-radius: 6px;
+  padding: 10px 20px;
+}
+
+/* Responsive */
+
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+@media screen and (min-width: 480px) {
+  #inner{
+      width: 50%;
   }
-  .characterDetails {
-    opacity: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-    position: absolute;
-    top: 0;
-    font-size: 12px;
-    padding: 15px;
-    height: 100%;
-    width: 100%;
-    background: black;
-    color: white;
-    transition: .4s;
+}
+
+@media screen and (min-width: 780px) {
+  #inner{
+      width: 33%;
   }
-  .characterDetails:hover {
-    opacity: 100;
-  }
-  .characterDetailsList {
-    background: url(rayitolonely.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 90%;
-    list-style: none;
-  }
-  .characterDetailsList li {
-    white-space: nowrap;
-    padding: 2px 0;
-  }
-  /* Responsive */
-  [class*="col-"] {
-    width: 100%;
-  }
-  @media only screen and (min-width: 600px) {
-    /* For tablets: */
-    .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
-    .col-s-3 {width: 25%;}
-    .col-s-4 {width: 33.33%;}
-    .col-s-5 {width: 41.66%;}
-    .col-s-6 {width: 50%;}
-    .col-s-7 {width: 58.33%;}
-    .col-s-8 {width: 66.66%;}
-    .col-s-9 {width: 75%;}
-    .col-s-10 {width: 83.33%;}
-    .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
-  }
-  @media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-  }
-  @media screen and (min-width: 480px) {
-    #inner{
-        width: 50%;
-    }
-  }
-  @media screen and (min-width: 780px) {
-    #inner{
-        width: 33%;
-    }
-  }*{
-    font-family:'IM fell English', serif;
-    margin: 0px;
-    padding: 0px;
-  }
-  
+}
