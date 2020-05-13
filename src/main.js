@@ -63,9 +63,7 @@ paginaPrincipal.innerHTML = `
     </div>
   </div>
 
-  <div class="dropdown">
-    <button class="dropbtn">Patronus</button>
-  </div>
+  
 
 
 
@@ -115,6 +113,7 @@ enterBtn.addEventListener("click", () => {
 
   const body = document.querySelector('body');
   body.classList = 'filtersBackground';
+  
 
   const resultsContainer = document.createElement("div");
   resultsContainer.id = "results";
@@ -262,8 +261,6 @@ function showData(data) {
       <li>Fecha de nacimiento: ${character.dateOfBirth}</li>
       <li>Año de nacimiento: ${character.yearOfBirth}</li>
       <li>Ascendencia: ${character.ancestry}</li>
-      <li>Color de ojos: ${character.eyeColour}</li>
-      <li>Color de cabello: ${character.hairColour}</li>
       <li>Actor/Actriz: ${character.actor}</li>
       <li>Estado: ${character.alive ? "Vivo" : "Muerto"}</li><br>
       <h4>Varita mágica</h4>
