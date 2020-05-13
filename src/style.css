@@ -1,20 +1,12 @@
-/* @media screen and (max-width: 400px) {
-} */
-
 
 *{
   font-family:'IM fell English', serif;
   margin: 0px;
-  /* padding: 0px; */
 }
 
-/*
-Agregar la class al lado de body con un punto y el 2do fondo */
 
 body {
   background-image: url("fondopagina.jpg");
-  background-repeat: repeat-y;
-  background-size: 100%;
 }
 
 .filtersBackground {
@@ -65,33 +57,16 @@ body {
     top: 70%;
     font-family: IM FELL English SC;
     font-size: 2em;
-
-
 }
 
 
 
-
-
-/*footer{
-/* background-color: rgb(236, 176, 98); */
-/* text-align: center;
-font-style: italic;
-font-size: 18px;
-} */
-
-
 /* PAG 2 */
-
-
-
 .main {
   display: flex;
   align-content: center;
   max-width: max-content;
-
 }
-
 
 .header {
     padding: 0px 0px 50px 80px;
@@ -111,22 +86,6 @@ font-size: 18px;
   margin: 0px;
 }
 
-/* .menu-container {
-  display:grid;
-  align-content: center;
-  align-items: center;
-  padding: 20px;
-}
-.row {
-  background: url(hpsegundo.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-  padding: 20px;
-  display: grid;
-  grid-gap: 20px;
-  text align-items: center; */
-/* } */
 
 .row {
   width:900px;
@@ -144,11 +103,6 @@ margin:0 auto;
 }
 
 
-
-
-/* Botones y drop down */
-
-/* Pag 1 */
 #selectEnter {
   font-family: 'IM Fell English SC';
   background-color:rgb(114, 48, 48);
@@ -162,9 +116,7 @@ margin:0 auto;
   padding: 10px 20px;
 }
 
-
 /* Pag 2 */
-
 .dropdown {
   position: relative;
   cursor: pointer;
@@ -181,18 +133,7 @@ margin:0 auto;
   width: 100%;
   display: block;
   cursor: pointer;
-}
 
-.btnP {
-  background-color: rgb(165, 88, 88);
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  grid-gap:20px;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  max-width: max-content;
 }
 
 .dropdown-content {
@@ -204,7 +145,6 @@ margin:0 auto;
   border-radius: 6px;
   padding: 8px;
   justify-content: center;
-margin:10;
 max-width: max-content;
 cursor: pointer;
 }
@@ -248,17 +188,12 @@ cursor: pointer;
   font-size: 24px;
   border: 1px solid rgb(68, 56, 56);
   text-align:center;
-  align-content: right;
-  border-radius: 6px;
   cursor: pointer;
   transition: 0.4s;
-
 }
 
 
-
 /* Resultados */
-
 .row.actions {
   grid-template-columns: repeat(auto-fit, minmax(0,200px));
 }
@@ -302,9 +237,7 @@ display:grid;
 }
 
 
-
 .characterDetails {
-
   opacity: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
   position: absolute;
@@ -332,56 +265,4 @@ display:grid;
   white-space: nowrap;
   padding: 2px 0;
 }
-.searchInput {
-  border-radius: 6px;
-  padding: 10px 20px;
-}
 
-/* Responsive */
-
-[class*="col-"] {
-  width: 100%;
-}
-
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
-
-@media screen and (min-width: 480px) {
-  #inner{
-      width: 50%;
-  }
-}
-
-@media screen and (min-width: 780px) {
-  #inner{
-      width: 33%;
-  }
-}
