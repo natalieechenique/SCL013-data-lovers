@@ -4,6 +4,7 @@ import {
   filterhogwartsStaff,
   filterhogwartsStudent,
   filterGender,
+  filterSearch
 } from "./data.js";
 
 // console.log(dataPotter);
@@ -16,27 +17,28 @@ welcome.classList = "paginaInicio";
 welcome.innerHTML = `
   <section id="welcome" class="welcome">
       <div class="inicio" id="inicio">
-      <img src="./rayo.png" class="logo" alt="rayo" height="100px" weight="50px">
-        <h1 class="titulo">Harry Potter <br> Beginners </h1>
-        <img src="./lentes.png" class="logo" alt="logo" height="100px" weight="50px">
+      <img src="./rayo.png" class="rayo" alt="Rayo" height="100px" weight="50px">
+        <h1 class="titulo">HARRY POTTER <br> Beginners </h1>
+        <img src="./lentes.png" class="lentes" alt="lentes" height="100px" weight="50px">
 
-        <p class="textoInicio"><i>Una mágica guía para principiantes y conocedores</i></p>
-        <p class="textoJuro">¡Juro solemnemente que mis intenciones no son buenas!</p>
+        <p class="textoInicio">Una mágica guía para principiantes y conocedores</p>
+        <i class="textoJuro">¡Juro solemnemente que mis intenciones no son buenas!</i>
         <button class='enterBtn' id='selectEnter'>Entrar</button>
       </div>
     </section>
 `;
+
 
 const paginaPrincipal = document.createElement("div");
 paginaPrincipal.id = "main";
 paginaPrincipal.classList = "main row";
 paginaPrincipal.innerHTML = `
 <div class="header">
-  <img src="./rayo.png" class="logo" alt="rayo" height="60px" weight="30px">
-  <h2 class="titleTwo">Harry Potter <br> Beginners </h2>
-  <img src="./lentes.png" class="logo2" alt="logo2" height="70px" weight="40px">
+  <img src="./rayo.png" class="rayo2" alt="rayo" height="30px" weight="15px">
+  <h1 class="title2">HARRY POTTER <br> Beginners </h1>
+  <img src="./lentes.png" class="lentes2" alt="lentes" height="80px" weight=540px">
 <div>
-<section id= "filtersSection" class="row filters">
+<section id= "filtersSection" class="row actions">
   <div class="dropdown">
     <button class="dropbtn" id="casas">Casas</button>
     <div class="dropdown-content">
@@ -65,19 +67,23 @@ paginaPrincipal.innerHTML = `
 
 
 
-  <div id="az">
+  <nav id="nav">
+   <div id="alphabeticalOrder" class="actions">
     <select id="alphabeticalSearch" class="select">
       <option value="order">Ordenar</option>
       <option value="a-z">A-Z</option>
       <option value="z-a">Z-A</option>
     </select>
   </div>
+  </nav>
+
 </div>
-<div class="row">
-  <div class="search">
-    <input class="searchInput" type="search" id="search" placeholder="Buscar por personaje"/>
-    <button class="icon">Buscar</button>
+<div class="actions">
+    <input class="searchInput" type="search" id="search" placeholder="Buscar por personaje"/><br>
+    <button class="icon" id="icon">Buscar</button>
   </div>
+</div>
+
 
 
 
@@ -114,6 +120,8 @@ enterBtn.addEventListener("click", () => {
   root.appendChild(paginaPrincipal);
   root.appendChild(resultsContainer);
   showData(dataPotter);
+
+
 
   const Gryffindor = document.querySelector("#Gryffindor");
   Gryffindor.addEventListener("click", () => {
@@ -172,7 +180,16 @@ enterBtn.addEventListener("click", () => {
   });
 
 
+    const searchInput = document.querySelector("#icon");
+    searchInput.addEventListener("click", () => {
+      clearContent("#results");
+      // Toma el value del input #search y lo usa como condicion para filtrar en f
+      let inputValue = document.querySelector('#search').value;
+      let showCharacter = filterSearch(dataPotter, inputValue);
+      return showData(showCharacter);
+  });
 
+});
 
 
 
@@ -200,7 +217,7 @@ function showData(data) {
       <li>Especie: ${character.species}</li>
       <li>Género: ${character.gender}</li>
       <li>Fecha de nacimiento: ${character.dateOfBirth}</li>
-      <li>Año de nacimiento: ${character.yearOfBirth}</li>
+
       <li>Ascendencia: ${character.ancestry}</li>
       <li>Actor/Actriz: ${character.actor}</li>
       <li>Estado: ${character.alive ? "Vivo" : "Muerto"}</li><br>
@@ -222,3 +239,53 @@ function showData(data) {
     // aca pego la tarjeta de cada personaje en results
   });
 }
+
+
+// if(document.getElementById("btnModal")){
+//   var modal = document.getElementById("tvesModal");
+//   var btn = document.getElementById("btnModal");
+//   var span = document.getElementsByClassName("close")[0];
+//   var body = document.getElementsByTagName("body")[0];
+
+//   btn.onclick = function() {
+//     modal.style.display = "block";
+
+//     body.style.position = "static";
+//     body.style.height = "100%";
+//     body.style.overflow = "hidden";
+//   }
+
+//   span.onclick = function() {
+//     modal.style.display = "none";
+
+//     body.style.position = "inherit";
+//     body.style.height = "auto";
+//     body.style.overflow = "visible";
+//   }
+
+//   window.onclick = function(event) {
+//     if (event.target == modal) {
+//       modal.style.display = "none";
+
+//       body.style.position = "inherit";
+//       body.style.height = "auto";
+//       body.style.overflow = "visible";
+//     }
+//   }
+// }
+
+
+
+// const modalCreate = document.createElement("div");
+// modalCreate.id="mod"
+// modalCreate.classList="mod"
+// modalCreate.innerHTML= `
+// <button id="btnModal">Abrir modal</button>
+// <div id="tvesModal" class="modalContainer">
+//   <div class="modal-content">
+//     <span class="close">×</span>
+//     <h2>Modal</h2>
+//     <p>Se ha desplegado el modal y bloqueado el scroll del body!</p>
+//   </div>
+// </div>
+// `;
