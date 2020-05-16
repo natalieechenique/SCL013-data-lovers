@@ -34,11 +34,12 @@ paginaPrincipal.id = "main";
 paginaPrincipal.classList = "main row";
 paginaPrincipal.innerHTML = `
 <div class="header">
-  <img src="./rayo.png" class="rayo2" alt="rayo" height="30px" weight="15px">
+  <img src="./rayo.png" class="rayo2" alt="rayo">
   <h1 class="title2">HARRY POTTER <br> Beginners </h1>
-  <img src="./lentes.png" class="lentes2" alt="lentes" height="80px" weight=540px">
-<div>
-<section id= "filtersSection" class="row actions">
+  <img src="./lentes.png" class="lentes2" alt="lentes" height="100px" weight=50px">
+</div>
+
+<section id= "filtersSection" class="row filters">
   <div class="dropdown">
     <button class="dropbtn" id="casas">Casas</button>
     <div class="dropdown-content">
@@ -65,33 +66,40 @@ paginaPrincipal.innerHTML = `
     </div>
   </div>
 
+  </section>
 
 
-  <nav id="nav">
-   <div id="alphabeticalOrder" class="actions">
-    <select id="alphabeticalSearch" class="select">
-      <option value="order">Ordenar</option>
-      <option value="a-z">A-Z</option>
-      <option value="z-a">Z-A</option>
-    </select>
-  </div>
-  </nav>
-
-</div>
-<div class="actions">
-    <input class="searchInput" type="search" id="search" placeholder="Buscar por personaje"/><br>
-    <button class="icon" id="icon">Buscar</button>
-  </div>
-</div>
+   <section id="actionsSection" class= "row actions">
 
 
-
-
-<div id="back">
+   <div id="back">
 <div id="backBtn" class="backButton" role="link" onclick="window.location='index.html'">Volver</div>
 </div>
+</div>
 
-</section>
+<div class="search actions">
+    <input class="searchInput" type="search" id="search" placeholder="Buscar por personaje"/>
+    <br>
+    <button class="icon" id="icon">Buscar</button>
+    </div>
+
+    <div id= "alphabOrder" class= "actions">
+    <div class="filterOptionBody">
+      <select id="order" class="orderBtn" name="Ordenar">
+        <option id="alph" value="All">Ordenar</option>
+        <option id="az" value="A-Z">A-Z</option>
+        <option id="za" value="Z-A">Z-A</option>
+      </select>
+      </div>
+
+      </section>
+
+<div class="varitaBox">
+<img src="./varita.png" class="varita" alt="varita" height="50px" weight=40px">
+</div>
+
+</div>
+
 `;
 
 // Renderiza sección welcome al cargar el sitio
@@ -239,6 +247,19 @@ function showData(data) {
     // aca pego la tarjeta de cada personaje en results
   });
 }
+
+
+
+
+
+// <div id="alphabeticaOrder" class="select">
+// <option value="order">Ordenar</option>
+// <option value="a-z">A-Z</option>
+// <option value="z-a">Z-A</option>
+// </div>
+
+
+
 
 
 // if(document.getElementById("btnModal")){
