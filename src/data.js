@@ -37,7 +37,7 @@ export function filterSearch(dataPotter, condition) {
       Object.keys(character)
         .some(() => character.name.toLowerCase().indexOf(termLowerCase) !== -1)
   }
-  
+
   let showCharacter = dataPotter.filter(filterBy(condition));
   return showCharacter;
   }

@@ -1,9 +1,7 @@
-
-*{
-  font-family:'IM fell English', serif;
+* {
+  font-family: "IM fell English", serif;
   margin: 0px;
 }
-
 
 /*Agregamos la class al lado de body con un punto y el 2do fondo */
 body {
@@ -19,19 +17,17 @@ body {
   /* background-size: cover cover; */
 }
 
-
 .welcome {
- font-style:'IM fell English', serif;
+  font-style: "IM fell English", serif;
   margin: 0px;
   padding: 20px;
   display: grid;
   grid-gap: 20px;
-  }
-
+}
 
 .inicio {
   color: black;
-  align-content:center;
+  align-content: center;
   text-align: center;
   display: grid;
   grid-gap: 20px;
@@ -40,22 +36,23 @@ body {
   font-family: IM FELL English SC;
 }
 
-@media screen and (max-width: 300px){
-  .inicio{
+@media screen and (max-width: 300px) {
+  .inicio {
     background-size: 60vw;
-  }}
+  }
+}
 
 .rayo {
   height: 100px;
-  align-content:center;
-  align-items:center;
+  align-content: center;
+  align-items: center;
   margin: 0px;
 }
 
 .lentes {
   height: 100px;
-  align-content:center;
-  align-items:center;
+  align-content: center;
+  align-items: center;
   margin: 0px;
 }
 
@@ -64,42 +61,44 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-  .titulo{
+  .titulo {
     font-size: 2em;
-  }}
+  }
+}
 
 .textoInicio {
   font-size: 2em;
   margin-bottom: 40px;
-  font-style: 'IM FELL English', SC;
+  font-style: "IM FELL English", SC;
 }
 
 @media screen and (max-width: 400px) {
-  .textoInicio{
+  .textoInicio {
     font-size: 1.5em;
-  }}
+  }
+}
 
 .textoJuro {
   font-size: 1.5em;
   margin-bottom: 40px;
   margin-bottom: 40px;
-  font-style: 'IM fell English', SC;
+  font-style: "IM fell English", SC;
 }
 
 @media screen and (max-width: 400px) {
-  .textoJuro{
+  .textoJuro {
     font-size: 1.5em;
     width: 60vw;
-  }}
-
-
+  }
+}
 
 /* PAG 2 */
 
 @media screen and (max-width: 400px) {
-  .filtersBackground{
+  .filtersBackground {
     margin: auto;
-  }}
+  }
+}
 
 .main {
   display: flex;
@@ -110,15 +109,22 @@ body {
 .header {
   text-align: center;
   font-size: 1em;
-    /* width: 100vw; */
+  /* width: 100vw; */
 }
 
 @media screen and (max-width: 400px) {
-  .header{
+  .header {
     text-align: center;
     font-size: 1em;
-  }}
+  }
+}
 
+.varitaBox {
+  display: flex;
+  vertical-align: bottom;
+  align-self: flex-start;
+  justify-content: center;
+}
 
 .title2 {
   text-align: center;
@@ -126,65 +132,61 @@ body {
 }
 
 .rayo2 {
-  height:70px;
-  align-content:center;
-  align-items:center;
+  height: 70px;
+  align-content: center;
+  align-items: center;
   margin: 0px;
 }
 .lentes2 {
   height: 70px;
-  align-content:center;
-  align-items:center;
+  align-content: center;
+  align-items: center;
   margin: 0px;
 }
 
-
 .row {
-  width:90%;
+  width: 90%;
   max-width: 900px;
   padding: 10px;
-display: grid;
-text-align:center;
-/* Genera cantidad de columnas  */
-grid-gap:20px;
-/* justify-content: center; */
-margin:0 auto;
-width: 100%;
-box-sizing: border-box;
+  display: grid;
+  text-align: center;
+  /* Genera cantidad de columnas  */
+  grid-gap: 20px;
+  /* justify-content: center; */
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
-
 
 #selectEnter {
-    display: block;
-    cursor: pointer;
-  font-family: 'IM Fell English SC';
-    background-color:rgb(114, 48, 48);
-    color: black;
-    font-size: 24px;
-    border: 1px solid rgb(68, 56, 56);
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.4s;
-    width:max-content;
-    box-shadow: 0px 8px 16px 0px rgba(56, 51, 51, 0.795);
-    padding: 10px 20px;
+  display: block;
+  cursor: pointer;
+  font-family: "IM Fell English SC";
+  background-color: rgb(114, 48, 48);
+  color: black;
+  font-size: 24px;
+  border: 1px solid rgb(68, 56, 56);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+  width: max-content;
+  box-shadow: 0px 8px 16px 0px rgba(56, 51, 51, 0.795);
+  padding: 10px 20px;
 }
-
-
 
 /* Pag 2 */
 .dropdown {
   position: relative;
-justify-items: center;
+  justify-items: center;
 }
 
 .dropbtn {
   background-color: rgb(165, 88, 88);
   color: rgb(0, 0, 0);
   box-shadow: 0px 8px 16px 0px rgba(56, 51, 51, 0.795);
-  text-align:center;
+  text-align: center;
   padding: 12px;
-/* max-width: fit-content; */
+  /* max-width: fit-content; */
   font-size: 18px;
   border: none;
   border-radius: 6px;
@@ -193,8 +195,8 @@ justify-items: center;
 }
 
 .dropdown-content {
-  display:grid;
-  text-align:center;
+  display: grid;
+  text-align: center;
   display: none;
   position: absolute;
   background-color: #b85555;
@@ -203,7 +205,7 @@ justify-items: center;
   z-index: 1;
   border-radius: 6px;
   padding: 10px;
-cursor: pointer;
+  cursor: pointer;
 }
 
 .dropdown-content a {
@@ -212,55 +214,31 @@ cursor: pointer;
   text-decoration: none;
   display: block;
   justify-content: center;
-margin:0;
-max-width: max-content;
-cursor: pointer;
+  margin: 0;
+  max-width: max-content;
+  cursor: pointer;
 }
 
-.dropdown-content a:hover {background-color: rgb(145, 110, 110);}
+.dropdown-content a:hover {
+  background-color: rgb(145, 110, 110);
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-.dropdown:hover .dropbtn {background-color: rgb(170, 97, 97);}
+.dropdown:hover .dropbtn {
+  background-color: rgb(170, 97, 97);
+}
 
-#selectEnter:hover {background-color: rgb(58, 25, 36);}
-#backBtn:hover {background-color: rgb(134, 80, 76);};
+#selectEnter:hover {
+  background-color: rgb(58, 25, 36);
+}
+#backBtn:hover {
+  background-color: rgb(134, 80, 76);
+}
 
-
-
-
-/*
-#alphabeticaOrder{
-  background-color: rgba(119, 97, 96, 0.651);
-  padding: 8px;
-  border-radius: 6px;
-  display:grid;
-  color:rgb(0, 0, 0);
-  font-size: 16px;
-  text-align: center;
-  font-size: 16px;
-  font-style: bold;
-  border-radius: 6px;
-
-} */
-
-
-/* .select {
-  background-color: rgba(119, 97, 96, 0.651);
-  padding: 8px;
-  border-radius: 6px;
-  display:grid;
-  color:rgb(0, 0, 0);
-  font-size: 16px;
-  text-align: center;
-  font-size: 16px;
-  font-style: bold;
-  border-radius: 6px;
-} */
-
-
-
- #search {
+#search {
   text-align: center;
   max-width: max-content;
   display: flex;
@@ -268,18 +246,16 @@ cursor: pointer;
   padding-left: 20px;
 }
 
-.search.actions{
+.search.actions {
   display: grid;
   grid-template-columns: 1fr min-content;
   max-width: 320px;
   justify-self: center;
 }
 
-
-
 .searchInput {
   background-color: rgb(255, 255, 255);
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   font-size: 14px;
   font-style: bold;
   padding: 6px;
@@ -289,7 +265,6 @@ cursor: pointer;
 
 @media screen and (max-width: 400px) {
   .searchInput {
-
     font-size: 14px;
     text-align: center;
     padding: 6px 2px;
@@ -300,12 +275,12 @@ cursor: pointer;
   background-color: rgb(255, 255, 255);
   color: rgb#524120;
   margin-top: 2px;
- border-radius: 4px;
+  border-radius: 4px;
 }
 
-.orderBtn{
+.orderBtn {
   background-color: rgb(255, 255, 255);
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   font-size: 14px;
   font-style: bold;
   padding: 6px;
@@ -322,86 +297,70 @@ cursor: pointer;
 }
 
 .backButton {
-  background-color:rgb(119, 97, 96, 09);
+  background-color: rgb(119, 97, 96, 09);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.795);
-  color:#000000;
+  color: #000000;
   border-radius: 6px;
   padding: 8px 20px;
   font-size: 18px;
   cursor: pointer;
   transition: 0.4s;
   max-width: max-content;
-
 }
-
-
-
 
 /* Resultados */
 
 .row.filters {
-  grid-template-columns: repeat(auto-fit, minmax(0,200px));
-   width: 90%;
-    padding: 10px;
-    display: grid;
-    text-align: center;
-    grid-gap: 30px;
-    justify-content: center;
-    margin: 0 auto;
-
+  grid-template-columns: repeat(auto-fit, minmax(0, 200px));
+  width: 90%;
+  padding: 10px;
+  display: grid;
+  text-align: center;
+  grid-gap: 30px;
+  justify-content: center;
+  margin: 0 auto;
 }
 @media screen and (max-width: 400px) {
-  .row.filters{
+  .row.filters {
     padding: 10px;
     display: grid;
     text-align: center;
     grid-gap: 20px;
     justify-content: center;
     margin: 0 auto;
-
-  }}
-
-
-
-.row.actions {
-  grid-template-columns:min-content 1fr min-content;
+  }
 }
 
-@media(max-width: 640px) {
+.row.actions {
+  grid-template-columns: min-content 1fr min-content;
+}
+
+@media (max-width: 640px) {
   .row.actions {
     grid-template-columns: 1fr;
     justify-items: center;
   }
 }
 
-
-
 .row.results {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 @media screen and (max-width: 400px) {
-  .row.results{
+  .row.results {
     grid-template-columns: 1fr 1fr;
-  }}
+  }
+}
 
-  @media screen and (max-width: 400px) {
-    .row.results{
-      grid-template-columns: 1fr 1fr;
-    }}
-
-
-
-
-  /* .action {
-    padding: 0px;
-  display:grid;
-  } */
-
+@media screen and (max-width: 400px) {
+  .row.results {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 .card {
   border-radius: 6px;
-   max-width: 250px;
+  max-width: 250px;
   max-height: 300px;
   overflow: hidden;
   position: relative;
@@ -419,7 +378,7 @@ cursor: pointer;
   position: absolute;
   bottom: 0;
   left: 0;
-  background:rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   display: grid;
   grid-gap: 0px;
@@ -429,20 +388,18 @@ cursor: pointer;
   font-size: 14px;
 }
 
-
 .characterDetails {
-    opacity: 0;
-    font-family: IM FELL English SC;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: black;
-    color: white;
-    transition: .4s;
-    text-align: center;
-  }
-
+  opacity: 0;
+  font-family: IM FELL English SC;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  color: white;
+  transition: 0.4s;
+  text-align: center;
+}
 
 .characterDetails:hover {
   opacity: 100;
@@ -452,23 +409,21 @@ cursor: pointer;
   background: url(rayitolonely.png);
   background-size: 100%;
   height: 100%;
- bottom: auto;
- font-size: 12px;
+  bottom: auto;
+  font-size: 12px;
   background-position: center center;
   background-repeat: no-repeat;
   list-style: none;
   padding: 20px;
   box-sizing: border-box;
 }
-@media(max-width:640px){
+@media (max-width: 640px) {
   .characterDetailsList {
-font-size: 10px;
+    font-size: 10px;
   }
 }
-
 
 .characterDetailsList li {
   white-space: nowrap;
   padding: 2px 0;
 }
-

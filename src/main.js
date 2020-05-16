@@ -24,6 +24,7 @@ welcome.innerHTML = `
         <img src="./lentes.png" class="lentes" alt="lentes" height="100px" weight="50px">
 
         <p class="textoInicio">Una mágica guía para principiantes y conocedores</p>
+        <img src="./varita.png" class="varita" alt="varita" height="35px" weight=10px">
         <i class="textoJuro">¡Juro solemnemente que mis intenciones no son buenas!</i>
         <button class='enterBtn' id='selectEnter'>Entrar</button>
       </div>
@@ -73,7 +74,6 @@ paginaPrincipal.innerHTML = `
 
    <section id="actionsSection" class= "row actions">
 
-
    <div id="back">
 <div id="backBtn" class="backButton" role="link" onclick="window.location='index.html'">Volver</div>
 </div>
@@ -83,7 +83,7 @@ paginaPrincipal.innerHTML = `
     <input class="searchInput" type="search" id="search" placeholder="Buscar por personaje"/>
     <button class="icon" id="icon">Buscar</button>
     </div>
-  
+
     <div id= "alphabOrder" class= "actions">
     <div class="filterOptionBody">
       <select id="order" class="orderBtn" name="Ordenar">
@@ -95,10 +95,9 @@ paginaPrincipal.innerHTML = `
 
       </section>
 
-<div class="varitaBox">
-<img src="./varita.png" class="varita" alt="varita" height="50px" weight=40px">
+      <div class"varitaBox">
+      <img src="./varita.png" class="varita" alt="varita" height="35px" weight=10px">
 </div>
-
 </div>
 
 `;
@@ -205,7 +204,7 @@ enterBtn.addEventListener("click", () => {
     if(event.target.value === 'A-Z') {
       filteredData = filteredData.sort(compare);
       return showData(filteredData);
-    } 
+    }
     if(event.target.value === 'Z-A') {
       filteredData = filteredData.reverse(compare);
       return showData(filteredData);
