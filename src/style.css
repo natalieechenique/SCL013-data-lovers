@@ -14,12 +14,11 @@ body {
 /* PAG 2 */
 .filtersBackground {
   background-image: url("hpsegundo.jpg");
-  background-size: cover cover;
+  /*background-size: cover cover;*/
 }
 
 
 .welcome {
- font-style:'IM fell English', serif;
   margin: 0px;
   padding: 20px;
   display: grid;
@@ -28,20 +27,19 @@ body {
 
 
 .inicio {
-  color: black;
-  align-content:center;
-  text-align: center;
-  display: grid;
-  grid-gap: 20px;
-  justify-items: center;
-  margin: 0px;
-  font-family: IM FELL English SC;
-}
-
-@media screen and (max-width: 300px){
-  .inicio{
-    background-size: 60vw;
-  }}
+    color: black;
+    align-content:center;
+    text-align: center;
+    display: grid;
+    grid-gap: 20px;
+    justify-items: center;
+    margin: 0px;
+    font-family: IM FELL English SC;
+  }
+@media screen and (max-width: 400px){
+    .inicio{
+      background-size: 60vw;
+    }}
 
 .rayo {
   height: 100px;
@@ -66,27 +64,28 @@ body {
     font-size: 2em;
   }}
 
-.textoInicio {
-  font-size: 2em;
-  margin-bottom: 40px;
-  font-style: 'IM FELL English', SC;
-}
-
+.textoInicio{
+    font-size: 2em;
+    margin-bottom: 40px;
+    font-family: IM FELL English SC;
+  }
 @media screen and (max-width: 400px) {
-  .textoInicio{
-    font-size: 1.5em;
-  }}
+    .textoInicio{
+      font-size: 1.5em;
+}}
 
-.textoJuro {
-  font-size: 1.5em;
-  margin-bottom: 40px;
-  margin-bottom: 40px;
-  font-style: 'IM fell English', SC;
+.textoJuro{
+  text-align: center;
+    width: 67%;
+    left: 50%;
+    top: 70%;
+    font-family: IM FELL English SC;
+    font-size: 2em;
 }
 
 @media screen and (max-width: 400px) {
   .textoJuro{
-    font-size: 1.5em;
+    font-size: 1em;
     width: 60vw;
   }}
 
@@ -107,8 +106,8 @@ body {
 
 .header {
   text-align: center;
-    width: 100vw;
-    text-align: center;
+    width: 100vh;
+    height: 60vh;
 }
 
 @media screen and (max-width: 400px) {
@@ -146,7 +145,7 @@ display: grid;
 /* Genera cantidad de columnas  */
 grid-gap:20px;
 justify-content: center;
-margin:0 auto;
+margin: 0 auto;
 }
 
 .row.filters {
@@ -197,7 +196,9 @@ margin:0 auto;
   cursor: pointer;
 
 }
-
+#alphabeticaOrder {
+  background-color: rgba(119, 97, 96, 0.651);
+}
 .dropdown-content {
   display: none;
   position: absolute;
@@ -247,18 +248,28 @@ cursor: pointer;
 
 .searchInput {
   background-color: rgb(255, 255, 255);
-  color:rgb(255, 255, 255);
+  color:rgba(119, 97, 96, 0.69);
   text-align: center;
   font-size: 16px;
   font-style: bold;
+  padding: 6px;
   border-radius: 6px;
-  padding: 4px
+  align-items: center;
+  align-content: center;
+  max-width: max-content;
+  text-align: center;
 }
 
 
-#icon{
+.icon{
   background-color: rgba(119, 97, 96, 0.69);
   color:rgb#524120;
+  display:grid;
+  align-items: center;
+ padding: 4px;
+ justify-content: center;
+  text-align: center;
+  max-width: max-content;
 }
 
 .back {
@@ -347,7 +358,11 @@ display:grid;
   font-size: 14px;
 }
 
-
+/*#audio{
+  width: 10px;
+  height: 5px; 
+  opacity: 0;
+}*/
 .characterDetails {
     opacity: 0;
     font-family: IM FELL English SC;
@@ -360,6 +375,7 @@ display:grid;
     color: white;
     transition: .4s;
     text-align: center;
+    flex-wrap: wrap;
   }
 
 
