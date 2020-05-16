@@ -4,12 +4,14 @@ import {
   filterhogwartsStaff,
   filterhogwartsStudent,
   filterGender,
-  filterSearch
+  filterSearch,
+  compare,
 } from "./data.js";
 
-// console.log(dataPotter);
 
 // Definimos los Bloques
+
+let filteredData = dataPotter.sort(compare);
 
 const welcome = document.createElement("div");
 welcome.id = "paginaInicio";
@@ -79,14 +81,13 @@ paginaPrincipal.innerHTML = `
 
 <div class="search actions">
     <input class="searchInput" type="search" id="search" placeholder="Buscar por personaje"/>
-    <br>
     <button class="icon" id="icon">Buscar</button>
     </div>
-
+  
     <div id= "alphabOrder" class= "actions">
     <div class="filterOptionBody">
       <select id="order" class="orderBtn" name="Ordenar">
-        <option id="alph" value="All">Ordenar</option>
+        <option id="alph" value="All" disabled selected>Ordenar</option>
         <option id="az" value="A-Z">A-Z</option>
         <option id="za" value="Z-A">Z-A</option>
       </select>
@@ -127,76 +128,89 @@ enterBtn.addEventListener("click", () => {
   const root = document.querySelector("#root");
   root.appendChild(paginaPrincipal);
   root.appendChild(resultsContainer);
-  showData(dataPotter);
+  showData(filteredData);
 
 
 
   const Gryffindor = document.querySelector("#Gryffindor");
   Gryffindor.addEventListener("click", () => {
     clearContent("#results");
-    let gryffindorMembers = filterHouse(dataPotter, "Gryffindor");
-    return showData(gryffindorMembers);
+    filteredData = filterHouse(dataPotter, "Gryffindor");
+    return showData(filteredData);
   });
 
   const Hufflepuff = document.querySelector("#Hufflepuff");
   Hufflepuff.addEventListener("click", () => {
     clearContent("#results");
-    let HufflepuffMembers = filterHouse(dataPotter, "Hufflepuff");
-    return showData(HufflepuffMembers);
+    filteredData = filterHouse(dataPotter, "Hufflepuff");
+    return showData(filteredData);
   });
 
   const Ravenclaw = document.querySelector("#Ravenclaw");
   Ravenclaw.addEventListener("click", () => {
     clearContent("#results");
-    let RavenclawMembers = filterHouse(dataPotter, "Ravenclaw");
-    return showData(RavenclawMembers);
+    filteredData = filterHouse(dataPotter, "Ravenclaw");
+    return showData(filteredData);
   });
 
   const Slytherin = document.querySelector("#Slytherin");
   Slytherin.addEventListener("click", () => {
     clearContent("#results");
-    let SlytherinMembers = filterHouse(dataPotter, "Slytherin");
-    return showData(SlytherinMembers);
+    filteredData = filterHouse(dataPotter, "Slytherin");
+    return showData(filteredData);
   });
 
   const hogwartsStaff = document.querySelector("#hogwartsStaff");
   hogwartsStaff.addEventListener("click", () => {
     clearContent("#results");
-    let hogwartsStaff = filterhogwartsStaff(dataPotter);
-    return showData(hogwartsStaff);
+    filteredData = filterhogwartsStaff(dataPotter);
+    return showData(filteredData);
   });
 
   const hogwartsStudent = document.querySelector("#hogwartsStudent");
   hogwartsStudent.addEventListener("click", () => {
     clearContent("#results");
-    let hogwartsStudent = filterhogwartsStudent(dataPotter);
-    return showData(hogwartsStudent);
+    filteredData = filterhogwartsStudent(dataPotter);
+    return showData(filteredData);
   });
 
   const femaleGender = document.querySelector("#femaleGender");
   femaleGender.addEventListener("click", () => {
     clearContent("#results");
-    let femaleGender = filterGender(dataPotter, "female");
-    return showData(femaleGender);
+    filteredData = filterGender(dataPotter, "female");
+    return showData(filteredData);
   });
 
   const maleGender = document.querySelector("#maleGender");
   maleGender.addEventListener("click", () => {
     clearContent("#results");
-    let maleGender = filterGender(dataPotter, "male");
-    return showData(maleGender);
+    filteredData = filterGender(dataPotter, "male");
+    return showData(filteredData);
   });
 
 
-    const searchInput = document.querySelector("#icon");
-    searchInput.addEventListener("click", () => {
-      clearContent("#results");
-      // Toma el value del input #search y lo usa como condicion para filtrar en f
-      let inputValue = document.querySelector('#search').value;
-      let showCharacter = filterSearch(dataPotter, inputValue);
-      return showData(showCharacter);
+  const searchInput = document.querySelector("#icon");
+  searchInput.addEventListener("click", () => {
+    clearContent("#results");
+    // Toma el value del input #search y lo usa como condicion para filtrar en f
+    let inputValue = document.querySelector('#search').value;
+    filteredData = filterSearch(dataPotter, inputValue);
+    return showData(filteredData);
   });
 
+
+  const sortData = document.querySelector('#order');
+  sortData.addEventListener('change', (event) => {
+    clearContent("#results");
+    if(event.target.value === 'A-Z') {
+      filteredData = filteredData.sort(compare);
+      return showData(filteredData);
+    } 
+    if(event.target.value === 'Z-A') {
+      filteredData = filteredData.reverse(compare);
+      return showData(filteredData);
+    }
+  })
 });
 
 
@@ -205,22 +219,28 @@ enterBtn.addEventListener("click", () => {
 // Creacion de funcion showData
 // Se va creando uno a uno la tarjeta de personajes recorriendo la dataPotter, creando los div, imagen, detalles
 function showData(data) {
-  data.forEach((character) => {
-    const container = document.createElement("div");
-    const img = document.createElement("img");
-    const name = document.createElement("div");
-    const details = document.createElement("div");
-    container.id = character.name;
-    container.classList = "card";
+  // Muestro los resultados de cada personaje por nombre con innerHTML en HTML
+  const results = document.querySelector('#results');
+  const noMatch = document.createElement('div');
+  noMatch.classList = "noMatch";
+  noMatch.innerHTML = "No se han encontrado resultados."
+  if (data.length > 0) {
+    data.forEach((character) => {
+      const container = document.createElement("div");
+      const img = document.createElement("img");
+      const name = document.createElement("div");
+      const details = document.createElement("div");
+      container.id = character.name;
+      container.classList = "card";
 
-    img.src = character.image;
-    img.classList = "portrait";
+      img.src = character.image;
+      img.classList = "portrait";
 
-    name.classList = "characterName";
-    name.innerHTML = `${character.name}`;
+      name.classList = "characterName";
+      name.innerHTML = `${character.name}`;
 
-    details.classList = "characterDetails";
-    details.innerHTML = `
+      details.classList = "characterDetails";
+      details.innerHTML = `
       <ul class="characterDetailsList">
       <li>Especie: ${character.species}</li>
       <li>Género: ${character.gender}</li>
@@ -237,76 +257,16 @@ function showData(data) {
       </ul>
     `;
 
-    container.appendChild(img);
-    container.appendChild(name);
-    container.appendChild(details);
+      container.appendChild(img);
+      container.appendChild(name);
+      container.appendChild(details);
 
-    // Muestro los resultados de cada personaje por nombre con innerHTML en HTML
-    const results = document.querySelector('#results');
-    results.appendChild(container);
-    // aca pego la tarjeta de cada personaje en results
-  });
+      results.appendChild(container);
+      // aca pego la tarjeta de cada personaje en results
+    });
+  } else {
+    results.appendChild(noMatch);
+  }
 }
 
 
-
-
-
-// <div id="alphabeticaOrder" class="select">
-// <option value="order">Ordenar</option>
-// <option value="a-z">A-Z</option>
-// <option value="z-a">Z-A</option>
-// </div>
-
-
-
-
-
-// if(document.getElementById("btnModal")){
-//   var modal = document.getElementById("tvesModal");
-//   var btn = document.getElementById("btnModal");
-//   var span = document.getElementsByClassName("close")[0];
-//   var body = document.getElementsByTagName("body")[0];
-
-//   btn.onclick = function() {
-//     modal.style.display = "block";
-
-//     body.style.position = "static";
-//     body.style.height = "100%";
-//     body.style.overflow = "hidden";
-//   }
-
-//   span.onclick = function() {
-//     modal.style.display = "none";
-
-//     body.style.position = "inherit";
-//     body.style.height = "auto";
-//     body.style.overflow = "visible";
-//   }
-
-//   window.onclick = function(event) {
-//     if (event.target == modal) {
-//       modal.style.display = "none";
-
-//       body.style.position = "inherit";
-//       body.style.height = "auto";
-//       body.style.overflow = "visible";
-//     }
-//   }
-// }
-
-
-
-// const modalCreate = document.createElement("div");
-// modalCreate.id="mod"
-// modalCreate.classList="mod"
-// modalCreate.innerHTML= `
-// <button id="btnModal">Abrir modal</button>
-// <div id="tvesModal" class="modalContainer">
-//   <div class="modal-content">
-//     <span class="close">×</span>
-//     <h2>Modal</h2>
-//     <p>Se ha desplegado el modal y bloqueado el scroll del body!</p>
-//   </div>
-// </div>
-// `;

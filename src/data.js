@@ -30,9 +30,28 @@ return characterHouse;
 
 
 export function filterSearch(dataPotter, condition) {
-  let showCharacter = dataPotter.filter(character => character.name === condition);
+
+  const filterBy = (condition) => {
+    const termLowerCase = condition.toLowerCase();
+    return (character) =>
+      Object.keys(character)
+        .some(() => character.name.toLowerCase().indexOf(termLowerCase) !== -1)
+  }
+  
+  let showCharacter = dataPotter.filter(filterBy(condition));
   return showCharacter;
   }
+
+export function compare( a, b ) {
+  if ( a.name < b.name ){
+    return -1;
+  }
+  if ( a.name > b.name ){
+    return 1;
+  }
+  return 0;
+}
+
 
 
   // export function filterOrder(dataPotter, condition) {
