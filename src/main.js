@@ -19,7 +19,7 @@ welcome.innerHTML = `
         <h1 class="titulo">HARRY POTTER <br> Beginners </h1>
         <img src="./lentes.png" class="lentes" alt="lentes" height="100px" weight="50px">
         <p class="textoInicio">Una mágica guía para principiantes y conocedores</p>
-        <img src="./varita.png" class="varita" alt="varita" height="35px" weight=10px">
+      
         <i class="textoJuro">¡Juro solemnemente que mis intenciones no son buenas!</i>
         <button class='enterBtn' id='selectEnter'>Entrar</button>
       </div>
@@ -77,9 +77,11 @@ paginaPrincipal.innerHTML = `
       </select>
       </div>
       </section>
-      <div class"varitaBox">
-      <img src="./varita.png" class="varita" alt="varita" height="35px" weight=10px">
+      <div class="varitaBox">
+      <img src="./varita.png" class="varita" alt="varita" height="50px" weight="40px">
+      
 </div>
+<div class="patronus">¡Expecto Patronum! </div>
 </div>
 `;
 // Renderiza sección welcome al cargar el sitio
@@ -141,13 +143,13 @@ enterBtn.addEventListener("click", () => {
   const femaleGender = document.querySelector("#femaleGender");
   femaleGender.addEventListener("click", () => {
     clearContent("#results");
-    filteredData = filterGender(dataPotter, "female");
+    filteredData = filterGender(dataPotter, "Femenino");
     return showData(filteredData);
   });
   const maleGender = document.querySelector("#maleGender");
   maleGender.addEventListener("click", () => {
     clearContent("#results");
-    filteredData = filterGender(dataPotter, "male");
+    filteredData = filterGender(dataPotter, "Masculino");
     return showData(filteredData);
   });
   const searchInput = document.querySelector("#icon");
