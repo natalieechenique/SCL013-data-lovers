@@ -2,7 +2,6 @@
   font-family: "IM fell English", serif;
   margin: 0px;
 }
-
 /*Agregamos la class al lado de body con un punto y el 2do fondo */
 body {
   background-image: url("fondopagina.jpg");
@@ -36,19 +35,17 @@ body {
   font-family: IM FELL English SC;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 400px) {
   .inicio {
     background-size: 60vw;
   }
 }
-
 .rayo {
   height: 100px;
   align-content: center;
   align-items: center;
   margin: 0px;
 }
-
 .lentes {
   height: 100px;
   align-content: center;
@@ -118,7 +115,6 @@ body {
     font-size: 1em;
   }
 }
-
 .varitaBox {
   display: flex;
   vertical-align: bottom;
@@ -143,7 +139,6 @@ body {
   align-items: center;
   margin: 0px;
 }
-
 .row {
   width: 90%;
   max-width: 900px;
@@ -157,7 +152,6 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
-
 #selectEnter {
   display: block;
   cursor: pointer;
@@ -179,7 +173,6 @@ body {
   position: relative;
   justify-items: center;
 }
-
 .dropbtn {
   background-color: rgb(165, 88, 88);
   color: rgb(0, 0, 0);
@@ -193,7 +186,6 @@ body {
   width: 100%;
   cursor: pointer;
 }
-
 .dropdown-content {
   display: grid;
   text-align: center;
@@ -207,7 +199,6 @@ body {
   padding: 10px;
   cursor: pointer;
 }
-
 .dropdown-content a {
   color: rgb(0, 0, 0);
   padding: 10px;
@@ -237,7 +228,6 @@ body {
 #backBtn:hover {
   background-color: rgb(134, 80, 76);
 }
-
 #search {
   text-align: center;
   max-width: max-content;
@@ -245,14 +235,12 @@ body {
   align-content: center;
   padding-left: 20px;
 }
-
 .search.actions {
   display: grid;
   grid-template-columns: 1fr min-content;
   max-width: 320px;
   justify-self: center;
 }
-
 .searchInput {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -262,7 +250,6 @@ body {
   border-radius: 6px;
   text-align: left;
 }
-
 @media screen and (max-width: 400px) {
   .searchInput {
     font-size: 14px;
@@ -270,14 +257,12 @@ body {
     padding: 6px 2px;
   }
 }
-
 .icon {
   background-color: rgb(255, 255, 255);
   color: rgb#524120;
   margin-top: 2px;
   border-radius: 4px;
 }
-
 .orderBtn {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -287,7 +272,6 @@ body {
   border-radius: 6px;
   text-align: center;
 }
-
 .back {
   text-align: center;
   max-width: max-content;
@@ -295,7 +279,6 @@ body {
   align-content: center;
   padding-left: 20px;
 }
-
 .backButton {
   background-color: rgb(119, 97, 96, 09);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.795);
@@ -351,13 +334,11 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 }
-
 @media screen and (max-width: 400px) {
   .row.results {
     grid-template-columns: 1fr 1fr;
   }
 }
-
 .card {
   border-radius: 6px;
   max-width: 250px;
@@ -365,7 +346,6 @@ body {
   overflow: hidden;
   position: relative;
 }
-
 .portrait {
   object-fit: cover;
   min-width: 100%;
@@ -373,7 +353,6 @@ body {
   width: 100%;
   height: 100%;
 }
-
 .characterName {
   position: absolute;
   bottom: 0;
@@ -387,7 +366,6 @@ body {
   padding: 10px 10px;
   font-size: 14px;
 }
-
 .characterDetails {
   opacity: 0;
   font-family: IM FELL English SC;

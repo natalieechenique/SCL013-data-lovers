@@ -11,12 +11,10 @@ export function filterHouse(dataPotter, condition) {
   let characterHouse = dataPotter.filter(character => character.house === condition);
   return characterHouse;
 }
-
 export function filterhogwartsStaff(dataPotter) {
   let characterHouse = dataPotter.filter(character => character.hogwartsStaff === true);
   return characterHouse;
 }
-
 export function filterhogwartsStudent(dataPotter) {
   let characterHouse = dataPotter.filter(character => character.hogwartsStudent === true);
   return characterHouse;
@@ -51,62 +49,4 @@ export function compare( a, b ) {
   }
   return 0;
 }
-
-
-
-  // export function filterOrder(dataPotter, condition) {
-  //   let showCharacter = filterOrder.filter(character => character.name === condition);
-  //   return showCharacter;
-  //   }
-
-
-
-
-
-  // export const orderData = (dataPotter, condition) => {
-  //   let filterOrder = dataArray; //Arreglo nuevo donde guardaremos persojes ordenados
-  //   if(condition==0){
-  //     return filterOrder;
-  //   }
-  //   if(condition == 1){
-  //     filterOrder.sort((a, b) => a.name.localeCompare(b.name));
-  //     return filterOrder;
-  //   }
-  //   if(condition==2){
-  //     filterOrder.sort((a, b) => a.name.localeCompare(b.name));
-  //     const filterOrderReverse=filterOrder.reverse();
-  //     return filterOrderReverse;
-  //   }
-
-  // }
-  // export default orderData;
-
-
-
-
-
-
-
-
-
-
-
-
-// export const orderData = (dataArray, condition) => {
-//   let filterOrder = dataArray; //Arreglo nuevo donde guardaremos persojes ordenados
-//   if(condition==0){
-//     return filterOrder;
-//   }
-//   if(condition == 1){
-//     filterOrder.sort((a, b) => a.name.localeCompare(b.name));
-//     return filterOrder;
-//   }
-//   if(condition==2){
-//     filterOrder.sort((a, b) => a.name.localeCompare(b.name));
-//     const filterOrderReverse=filterOrder.reverse();
-//     return filterOrderReverse;
-//   }
-
-// }
-// export default orderData;
 

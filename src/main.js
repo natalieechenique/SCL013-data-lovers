@@ -41,7 +41,6 @@ paginaPrincipal.innerHTML = `
   <h1 class="title2">HARRY POTTER <br> Beginners </h1>
   <img src="./lentes.png" class="lentes2" alt="lentes" height="100px" weight=50px">
 </div>
-
 <section id= "filtersSection" class="row filters">
   <div class="dropdown">
     <button class="dropbtn" id="casas">Casas</button>
@@ -52,7 +51,6 @@ paginaPrincipal.innerHTML = `
     <a id="Slytherin">Slytherin </a>
     </div>
   </div>
-
   <div class="dropdown">
     <button class="dropbtn">Personajes</button>
     <div class="dropdown-content">
@@ -60,7 +58,6 @@ paginaPrincipal.innerHTML = `
       <a id="maleGender">Masculinos</a>
     </div>
   </div>
-
   <div class="dropdown">
     <button class="dropbtn">Hogwarts</button>
     <div class="dropdown-content">
@@ -78,12 +75,10 @@ paginaPrincipal.innerHTML = `
 <div id="backBtn" class="backButton" role="link" onclick="window.location='index.html'">Volver</div>
 </div>
 </div>
-
 <div class="search actions">
     <input class="searchInput" type="search" id="search" placeholder="Buscar por personaje"/>
     <button class="icon" id="icon">Buscar</button>
     </div>
-
     <div id= "alphabOrder" class= "actions">
     <div class="filterOptionBody">
       <select id="order" class="orderBtn" name="Ordenar">
@@ -123,7 +118,6 @@ enterBtn.addEventListener("click", () => {
   resultsContainer.id = "results";
   resultsContainer.classList = "row results";
   document.getElementById("root").appendChild(resultsContainer);
-
   const root = document.querySelector("#root");
   root.appendChild(paginaPrincipal);
   root.appendChild(resultsContainer);
@@ -137,35 +131,30 @@ enterBtn.addEventListener("click", () => {
     filteredData = filterHouse(dataPotter, "Gryffindor");
     return showData(filteredData);
   });
-
   const Hufflepuff = document.querySelector("#Hufflepuff");
   Hufflepuff.addEventListener("click", () => {
     clearContent("#results");
     filteredData = filterHouse(dataPotter, "Hufflepuff");
     return showData(filteredData);
   });
-
   const Ravenclaw = document.querySelector("#Ravenclaw");
   Ravenclaw.addEventListener("click", () => {
     clearContent("#results");
     filteredData = filterHouse(dataPotter, "Ravenclaw");
     return showData(filteredData);
   });
-
   const Slytherin = document.querySelector("#Slytherin");
   Slytherin.addEventListener("click", () => {
     clearContent("#results");
     filteredData = filterHouse(dataPotter, "Slytherin");
     return showData(filteredData);
   });
-
   const hogwartsStaff = document.querySelector("#hogwartsStaff");
   hogwartsStaff.addEventListener("click", () => {
     clearContent("#results");
     filteredData = filterhogwartsStaff(dataPotter);
     return showData(filteredData);
   });
-
   const hogwartsStudent = document.querySelector("#hogwartsStudent");
   hogwartsStudent.addEventListener("click", () => {
     clearContent("#results");
@@ -244,7 +233,6 @@ function showData(data) {
       <li>Especie: ${character.species}</li>
       <li>Género: ${character.gender}</li>
       <li>Fecha de nacimiento: ${character.dateOfBirth}</li>
-
       <li>Ascendencia: ${character.ancestry}</li>
       <li>Actor/Actriz: ${character.actor}</li>
       <li>Estado: ${character.alive ? "Vivo" : "Muerto"}</li><br>
