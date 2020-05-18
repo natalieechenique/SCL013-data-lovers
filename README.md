@@ -7,10 +7,6 @@
 * [3. ¿Cómo se construye HP Beginners?](#construcción)
 * [4. Experiencia UX](#usuarios)
 * [5. Navegación](#navegación)
-* [6. Test Unitarios]
-* [7. Conclusiones]
-* [8. Agradecimientos]
-* [9. Checklist](BORRAR DESPUÉS)(#checklist)
 
 ***
 
@@ -142,9 +138,9 @@ Para complementar esta investigación, y a modo de nueva estrategia, ya que el l
 
 En relación a los resultados de maze, comenzamos construir nuestro código. Decidimos acotar aún más las categorías en el menú, ya que cierta información que propusimos en un principio, no se encuentra en la data. Así, llegamos al siguiente resultado.
 
-
-
-((((((((((PONER ACÁ EL RESULTADO FINAL DE LA PÁGINA))))))))))
+![Fotos página final](1.png)
+![fotos pagina final2](2.png)
+![fotos pagina3](3.png)
 
 
 ***

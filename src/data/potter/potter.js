@@ -222,7 +222,7 @@ export default [
   {
     name: 'Luna Lovegood',
     species: 'Humano',
-    gender: 'f',
+    gender: 'Femenino',
     house: 'Ravenclaw',
     dateOfBirth: '13-02-1981',
     yearOfBirth: 1981,

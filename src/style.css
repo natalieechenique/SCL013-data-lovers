@@ -19,6 +19,11 @@ body {
   background-image: url("hpsegundo.jpg");
   /* background-size: cover cover; */
 }
+@media screen and (max-width: 400px) {
+  .filtersBackground {
+    margin: auto;
+  }
+}
 .welcome {
   margin: 0px;
   padding: 20px;
@@ -82,7 +87,7 @@ body {
   }
 }
 .textoJuro {
-  font-size: 1.5em;
+  /*font-size: 1.5em;*/
   margin-bottom: 40px;
   margin-bottom: 40px;
   font-family: "IM fell English SC";
@@ -94,11 +99,7 @@ body {
   }
 }
 /* PAG 2 */
-@media screen and (max-width: 400px) {
-  .filtersBackground {
-    margin: auto;
-  }
-}
+
 .main {
   display: flex;
   align-content: center;
@@ -124,6 +125,12 @@ body {
 .title2 {
   text-align: center;
   font-family: IM FELL English SC;
+}
+
+@media screen and (max-width: 400px) {
+  .title2 {
+    font-size: 2em;
+  }
 }
 .rayo2 {
   height: 70px;
@@ -170,6 +177,11 @@ body {
 .patronus{
  font-size: 2em;
  text-align: center;
+}
+@media screen and (max-width: 400px) {
+  .title2 {
+    font-size: 1.5em;
+  }
 }
 .dropdown {
   position: relative;

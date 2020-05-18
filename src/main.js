@@ -19,7 +19,6 @@ welcome.innerHTML = `
         <h1 class="titulo">HARRY POTTER <br> Beginners </h1>
         <img src="./lentes.png" class="lentes" alt="lentes" height="100px" weight="50px">
         <p class="textoInicio">Una mágica guía para principiantes y conocedores</p>
-      
         <i class="textoJuro">¡Juro solemnemente que mis intenciones no son buenas!</i>
         <button class='enterBtn' id='selectEnter'>Entrar</button>
       </div>
