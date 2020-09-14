@@ -5,11 +5,15 @@
 /*Agregamos la class al lado de body con un punto y el 2do fondo */
 body {
   background-image: url("fondopagina.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 
 #root {
   padding: 20px;
 }
+
+
 /* PAG 2 */
 .filtersBackground {
   background-image: url("hpsegundo.jpg");
@@ -152,6 +156,12 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+
+.patronus{
+  font-size: 2em;
+  text-align: center;
+ }
+
 #selectEnter {
   display: block;
   cursor: pointer;

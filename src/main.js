@@ -1,4 +1,8 @@
+
+// Llamamos a la data general de potter.js
 import dataPotter from "./data/potter/potter.js";
+
+// Llamamos a las funciones creadas en data.js
 import {
   filterHouse,
   filterhogwartsStaff,
@@ -9,10 +13,17 @@ import {
 } from "./data.js";
 
 
+
 // Definimos los Bloques
 
+// Agregamos .sort a funcion filteredData (la data filtrada) para que muestre por defecto los personajes de la a-z
 let filteredData = dataPotter.sort(compare);
 
+
+// PAG 1
+
+// Creamos la variable de la página del inicio, con su div general de la pag 1 'paginaInicio, su id y clase'
+// Luego copiamos los div creados en HTML y lo inyectamos desde aca a HTML con innerHTML y dentro de las comillas francesas
 const welcome = document.createElement("div");
 welcome.id = "paginaInicio";
 welcome.classList = "paginaInicio";
@@ -31,6 +42,8 @@ welcome.innerHTML = `
     </section>
 `;
 
+
+// Creamos PAG 2 , div 'paginaPrincipal' mismo método
 
 const paginaPrincipal = document.createElement("div");
 paginaPrincipal.id = "main";
@@ -75,10 +88,12 @@ paginaPrincipal.innerHTML = `
 <div id="backBtn" class="backButton" role="link" onclick="window.location='index.html'">Volver</div>
 </div>
 </div>
+
 <div class="search actions">
     <input class="searchInput" type="search" id="search" placeholder="Buscar por personaje"/>
     <button class="icon" id="icon">Buscar</button>
     </div>
+
     <div id= "alphabOrder" class= "actions">
     <div class="filterOptionBody">
       <select id="order" class="orderBtn" name="Ordenar">
@@ -93,31 +108,45 @@ paginaPrincipal.innerHTML = `
       <div class"varitaBox">
       <img src="./varita.png" class="varita" alt="varita" height="35px" weight=10px">
 </div>
+
+<div class="patronus">¡Expecto Patronum! </div>
+
 </div>
 
 `;
 
 // Renderiza sección welcome al cargar el sitio
+// Llamamos al id 'root' y creamos su div hijo 'welcome' titulo, etc
 document.getElementById("root").appendChild(welcome);
 
-// Funcion para limpiar un contenedor
+
+
+// Funcion general para limpiar un contenedor
 function clearContent(id) {
   document.querySelector(id).innerHTML = "";
 }
 
-//Función para cargar segunda pantalla
 
+
+//Función para cargar segunda pantalla 'paginaPrincipal desde boton entrar de 'paginaInicio'
 const enterBtn = document.querySelector("#selectEnter");
 enterBtn.addEventListener("click", () => {
   clearContent("#root");
 
+
+
+  // Const body para agregar segundo background en PAG 2
   const body = document.querySelector('body');
   body.classList = 'filtersBackground';
 
+
+  // Creamos div de resultados ordenados en grilla CSS despues
   const resultsContainer = document.createElement("div");
   resultsContainer.id = "results";
   resultsContainer.classList = "row results";
   document.getElementById("root").appendChild(resultsContainer);
+
+  // Creamos const root, tomamos el id root y creamos div hijos 'paginaPrincipal' y 'resultsContainer' que luego mostrara resultados llamando a funcion creada mas abajo 'showData'
   const root = document.querySelector("#root");
   root.appendChild(paginaPrincipal);
   root.appendChild(resultsContainer);
@@ -125,6 +154,11 @@ enterBtn.addEventListener("click", () => {
 
 
 
+  // Funciones principales
+
+  // Llamamos l a las funciones creadas por nosotros desde data.js
+
+  // Función filtrar  por
   const Gryffindor = document.querySelector("#Gryffindor");
   Gryffindor.addEventListener("click", () => {
     clearContent("#results");
@@ -149,6 +183,8 @@ enterBtn.addEventListener("click", () => {
     filteredData = filterHouse(dataPotter, "Slytherin");
     return showData(filteredData);
   });
+
+
   const hogwartsStaff = document.querySelector("#hogwartsStaff");
   hogwartsStaff.addEventListener("click", () => {
     clearContent("#results");
@@ -161,6 +197,7 @@ enterBtn.addEventListener("click", () => {
     filteredData = filterhogwartsStudent(dataPotter);
     return showData(filteredData);
   });
+
 
   const femaleGender = document.querySelector("#femaleGender");
   femaleGender.addEventListener("click", () => {
@@ -177,6 +214,7 @@ enterBtn.addEventListener("click", () => {
   });
 
 
+//Función buscar por nombre//
   const searchInput = document.querySelector("#icon");
   searchInput.addEventListener("click", () => {
     clearContent("#results");
@@ -187,9 +225,11 @@ enterBtn.addEventListener("click", () => {
   });
 
 
+//Función ordenar//
   const sortData = document.querySelector('#order');
   sortData.addEventListener('change', (event) => {
     clearContent("#results");
+
     if(event.target.value === 'A-Z') {
       filteredData = filteredData.sort(compare);
       return showData(filteredData);
@@ -200,7 +240,6 @@ enterBtn.addEventListener("click", () => {
     }
   })
 });
-
 
 
 
@@ -217,13 +256,12 @@ function showData(data) {
       const container = document.createElement("div");
       const img = document.createElement("img");
       const name = document.createElement("div");
-      const details = document.createElement("div");
       container.id = character.name;
+      const details = document.createElement("div");
       container.classList = "card";
 
       img.src = character.image;
       img.classList = "portrait";
-
       name.classList = "characterName";
       name.innerHTML = `${character.name}`;
 
